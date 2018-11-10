@@ -30,7 +30,7 @@ body {
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: #353232;
+      background-color: #2f2c2c;
       opacity: 0.6;
       overflow: hidden; }
   .headerContainerTitle {
@@ -58,56 +58,135 @@ body {
   .creationsDescriptionTitle {
     font-size: 50px;
     text-align: center;
-    color: #353232;
+    color: #2f2c2c;
     margin: 0; }
   .creationsDescriptionText {
     font-size: 16px;
     line-height: 1.5;
-    color: #353232;
+    color: #2f2c2c;
     margin-top: 50px;
     text-align: justify; }
 .creationsPortfolio {
-  background-color: #353232; }
+  background-color: #2f2c2c; }
   .creationsPortfolioContainer {
     width: 70%;
     margin: 100px auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between; }
-    .creationsPortfolioContainerItemImages {
+    .creationsPortfolioContainerItem {
+      margin: 0 10px;
       display: flex;
-      justify-content: center;
-      margin: 100px 0 0 0;
-      -webkit-filter: grayscale(0);
-      filter: grayscale(0);
-      -webkit-transition: .2s ease-in-out;
-      transition: .2s ease-in-out;
-      cursor: pointer;
-      overflow: hidden; }
-      .creationsPortfolioContainerItemImages img {
-        -webkit-transition: .4s ease-in-out;
-        transition: .4s ease-in-out; }
-      .creationsPortfolioContainerItemImages:first-child {
-        margin-top: 0; }
-      .creationsPortfolioContainerItemImages:hover {
-        -webkit-filter: grayscale(80%);
-        filter: grayscale(80%); }
-      .creationsPortfolioContainerItemImages:hover > img {
-        transform: scale(1.1); }
+      justify-content: center; }
+      .creationsPortfolioContainerItemImages {
+        display: flex;
+        justify-content: center;
+        margin: 100px 0 0;
+        -webkit-filter: grayscale(0);
+        filter: grayscale(0);
+        -webkit-transition: .2s ease-in-out;
+        transition: .2s ease-in-out;
+        cursor: pointer;
+        overflow: hidden;
+        width: 255px; }
+        .creationsPortfolioContainerItemImages img {
+          -webkit-transition: .4s ease-in-out;
+          transition: .4s ease-in-out; }
+        .creationsPortfolioContainerItemImages:hover {
+          -webkit-filter: grayscale(80%);
+          filter: grayscale(80%); }
+        .creationsPortfolioContainerItemImages:hover > img {
+          transform: scale(1.1); }
 
-@media only screen and (max-device-width: 575px) {
+.presentationContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 60px 0; }
+  .presentationContainerPicture {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 25%; }
+    .presentationContainerPicture span {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px; }
+    .presentationContainerPictureOrianne {
+      background-image: url("http://lorempicsum.com/up/350/200/6");
+      background-size: cover; }
+    .presentationContainerPictureSimon {
+      background-image: url("http://lorempicsum.com/up/350/200/1");
+      background-size: cover; }
+    .presentationContainerPictureLouis {
+      background-image: url("http://lorempicsum.com/up/255/200/5");
+      background-size: cover; }
+  .presentationContainerParagraph {
+    width: 50%;
+    margin: 20px 0; }
+    .presentationContainerParagraphTitle {
+      font-size: 50px;
+      text-align: center;
+      color: #2f2c2c;
+      margin: 0; }
+    .presentationContainerParagraphText {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #2f2c2c;
+      margin-top: 50px;
+      text-align: justify; }
+
+@media only screen and (min-device-width: 1045px) {
+  .presentationContainerPictureOrianne {
+    margin: -11% 0 0 17%; }
+  .presentationContainerPictureSimon {
+    margin: 18% 0 -5% 40%; }
+  .presentationContainerPictureLouis {
+    margin: -33% 0 0 23%; } }
+@media only screen and (min-device-width: 795px) and (max-device-width: 1045px) {
+  .presentationContainerPictureOrianne {
+    margin: 40px auto; }
+  .presentationContainerPictureSimon {
+    margin: 40px auto; }
+  .presentationContainerPictureLouis {
+    margin: 40px auto 100px; } }
+@media only screen and (max-device-width: 795px) {
+  .presentationContainer {
+    flex-direction: column; }
+    .presentationContainerPicture {
+      flex-direction: row;
+      order: 2;
+      width: 100%;
+      padding: 0 10px; }
+      .presentationContainerPictureOrianne {
+        margin: 10px auto; }
+      .presentationContainerPictureSimon {
+        margin: 10px auto; }
+      .presentationContainerPictureLouis {
+        margin: 10px auto; }
+    .presentationContainerParagraph {
+      order: 1;
+      width: 100%;
+      padding: 0 10px; } }
+@media only screen and (max-device-width: 874px) {
   .headerContainerTitle {
     font-size: 50px;
     padding: 0 20px; }
 
+  .CreationsDescription {
+    margin: 80px 0;
+    width: 100%;
+    padding: 0 10px; }
   .CreationsPortfolioContainer {
     flex-direction: column; }
-    .CreationsPortfolioContainerItemImages {
-      margin: 50px 0; }
-      .CreationsPortfolioContainerItemImages:hover > img {
-        transform: scale(1); }
-      .CreationsPortfolioContainerItemImages:first-child {
-        margin-top: 50px; } }
+    .CreationsPortfolioContainerItem {
+      margin: 0 auto;
+      flex-direction: column;
+      justify-content: center; }
+      .CreationsPortfolioContainerItemImages {
+        margin: 50px 0; }
+        .CreationsPortfolioContainerItemImages:hover > img {
+          transform: scale(1); } }
 @-webkit-keyframes zoomin {
   0% {
     -webkit-transform: scale(1.1);
