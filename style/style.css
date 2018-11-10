@@ -3,7 +3,7 @@ body {
   margin: 0;
   border: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: rgba(0, 0, 0, 0); }
+  background-color: #f2f0f0; }
 
 * {
   box-sizing: border-box;
@@ -30,7 +30,8 @@ body {
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: #353232;
+      opacity: 0.6;
       overflow: hidden; }
   .headerContainerTitle {
     display: flex;
@@ -46,7 +47,7 @@ body {
     z-index: 2;
     text-transform: uppercase;
     font-weight: 700;
-    color: #efefef; }
+    color: #f2f0f0; }
 
 .creationsDescription {
   width: 70%;
@@ -57,16 +58,16 @@ body {
   .creationsDescriptionTitle {
     font-size: 50px;
     text-align: center;
-    opacity: 0.8;
+    color: #353232;
     margin: 0; }
   .creationsDescriptionText {
     font-size: 16px;
     line-height: 1.5;
-    opacity: 0.8;
+    color: #353232;
     margin-top: 50px;
     text-align: justify; }
 .creationsPortfolio {
-  background-color: rgba(0, 0, 0, 0.8); }
+  background-color: #353232; }
   .creationsPortfolioContainer {
     width: 70%;
     margin: 100px auto;
@@ -74,27 +75,39 @@ body {
     flex-direction: row;
     justify-content: space-between; }
     .creationsPortfolioContainerItemImages {
+      display: flex;
+      justify-content: center;
       margin: 100px 0 0 0;
-      -webkit-filter: grayscale(80%);
-      filter: grayscale(80%);
+      -webkit-filter: grayscale(0);
+      filter: grayscale(0);
       -webkit-transition: .2s ease-in-out;
       transition: .2s ease-in-out;
-      cursor: pointer; }
+      cursor: pointer;
+      overflow: hidden; }
       .creationsPortfolioContainerItemImages img {
         -webkit-transition: .4s ease-in-out;
         transition: .4s ease-in-out; }
       .creationsPortfolioContainerItemImages:first-child {
         margin-top: 0; }
       .creationsPortfolioContainerItemImages:hover {
-        -webkit-filter: grayscale(0);
-        filter: grayscale(0); }
+        -webkit-filter: grayscale(80%);
+        filter: grayscale(80%); }
       .creationsPortfolioContainerItemImages:hover > img {
         transform: scale(1.1); }
 
 @media only screen and (max-device-width: 575px) {
-  #headerContainerTitle {
+  .headerContainerTitle {
     font-size: 50px;
-    padding: 0 20px; } }
+    padding: 0 20px; }
+
+  .CreationsPortfolioContainer {
+    flex-direction: column; }
+    .CreationsPortfolioContainerItemImages {
+      margin: 50px 0; }
+      .CreationsPortfolioContainerItemImages:hover > img {
+        transform: scale(1); }
+      .CreationsPortfolioContainerItemImages:first-child {
+        margin-top: 50px; } }
 @-webkit-keyframes zoomin {
   0% {
     -webkit-transform: scale(1.1);

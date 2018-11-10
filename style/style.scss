@@ -3,7 +3,7 @@ body {
     margin: 0;
     border: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: #f2f0f0;
 }
 
 * {
@@ -35,7 +35,8 @@ body {
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-color: rgba(0, 0, 0, 0.5);
+                background-color: #353232;
+                opacity: 0.6;
                 overflow: hidden;
             }
         }
@@ -56,13 +57,12 @@ body {
             z-index: 2;
             text-transform: uppercase;
             font-weight: 700;
-            color: #efefef;
+            color: #f2f0f0;
         }
     }
 }
 
 .creations {
-
 
     &Description {
         width: 70%;
@@ -75,21 +75,21 @@ body {
         &Title {
             font-size: 50px;
             text-align: center;
-            opacity: 0.8;
+            color: #353232;
             margin: 0;
         }
 
         &Text {
             font-size: 16px;
             line-height: 1.5;
-            opacity: 0.8;
+            color: #353232;
             margin-top: 50px;
             text-align: justify;
         }
     }
 
     &Portfolio {
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: #353232;
 
         &Container {
             width: 70%;
@@ -99,13 +99,17 @@ body {
             justify-content: space-between;
 
             &Item {
+
                 &Images {
+                    display: flex;
+                    justify-content: center;
                     margin: 100px 0 0 0;
-                    -webkit-filter: grayscale(80%);
-                    filter: grayscale(80%);
+                    -webkit-filter: grayscale(0);
+                    filter: grayscale(0);
                     -webkit-transition: .2s ease-in-out;
                     transition: .2s ease-in-out;
                     cursor: pointer;
+                    overflow: hidden;
 
                     img {
                         -webkit-transition: .4s ease-in-out;
@@ -118,16 +122,14 @@ body {
                     }
 
                     &:hover {
-                        -webkit-filter: grayscale(0);
-                        filter: grayscale(0);
+
+                        -webkit-filter: grayscale(80%);
+                        filter: grayscale(80%);
                     }
 
                     &:hover>img {
                         transform: scale(1.1);
                     }
-
-                    &Overlay {}
-
                 }
             }
         }
@@ -135,12 +137,36 @@ body {
 }
 
 @media only screen and (max-device-width: 575px) {
-    #header {
+    .header {
         &Container {
 
             &Title {
                 font-size: 50px;
                 padding: 0 20px;
+            }
+        }
+    }
+
+    .Creations {
+        &Description {}
+
+        &Portfolio {
+            &Container {
+                flex-direction: column;
+
+                &Item {
+                    &Images {
+                        margin: 50px 0;
+
+                        &:hover>img {
+                            transform: scale(1);
+                        }
+
+                        &:first-child {
+                            margin-top: 50px;
+                        }
+                    }
+                }
             }
         }
     }
