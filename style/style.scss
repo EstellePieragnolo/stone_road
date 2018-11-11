@@ -94,32 +94,40 @@ body {
         &Container {
             width: 70%;
             margin: 100px auto;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            // display: flex;
+            // flex-direction: row;
+
 
             &Item {
-                margin: -90px 10px 0;
+                // margin: -90px 10px 0;
                 display: flex;
                 justify-content: center;
-                flex-direction: column;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around;
+
+
 
                 &Images {
-                    display: flex;
-                    justify-content: center;
-                    margin: 100px 0 0;
                     -webkit-filter: grayscale(0);
                     filter: grayscale(0);
                     -webkit-transition: .2s ease-in-out;
                     transition: .2s ease-in-out;
                     cursor: pointer;
                     overflow: hidden;
-                    width: 255px;
+                    width: 250px;
+                    margin: 20px;
 
                     img {
                         -webkit-transition: .4s ease-in-out;
                         transition: .4s ease-in-out;
+                        width: 100%;
+                    }
 
+                    i[aria-hidden=true] {
+                        cursor: default;
+                        border: none;
+                        width: 250px;
                     }
 
                     &:hover {
@@ -130,6 +138,11 @@ body {
                     &:hover>img {
                         transform: scale(1.1);
                     }
+                }
+
+                #aria {
+                    margin: 0;
+                    width: 290px;
                 }
             }
         }
@@ -198,17 +211,22 @@ body {
     flex-direction: row;
     background-color: #2f2c2c;
 
+
     &Container {
+        display: flex;
+        align-items: center;
         width: 50%;
+        margin: 80px 0 80px 60px;
     }
 
     &Info {
+        margin: 40px 0;
         display: flex;
         justify-content: center;
         flex-direction: column;
         width: 50%;
         color: #f2f0f0;
-        padding: 0 60px;
+        padding: 0 40px;
 
         &Title {
             font-size: 50px;
@@ -223,6 +241,84 @@ body {
             text-align: justify;
         }
 
+    }
+}
+
+.contact {
+    &Container {
+        color: #2f2c2c;
+        margin: 80px 0;
+
+        &Title {
+            font-size: 50px;
+            text-align: center;
+            margin: 0;
+        }
+
+        &Text {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-top: 50px;
+            text-align: justify;
+        }
+    }
+}
+
+// Modal
+
+.modalContainer {
+    background-color: #2f2c2c;
+    width: 80%;
+    height: 80%;
+    max-width: unset;
+    margin: 5% 10%;
+    display: flex;
+    flex-direction: row;
+
+    &Close {
+        padding: 20px;
+        width: 30px;
+        height: 30px;
+        z-index: 1100;
+        color: #f2f0f0;
+        position: absolute;
+        top: 0;
+        right: 20px;
+    }
+
+    &Picture {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+
+        &Item {
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+    }
+
+    &Infos {
+        margin: 30px;
+        width: 50%;
+
+        &Title {
+            font-size: 50px;
+            text-align: center;
+            margin: 0;
+            color: #f2f0f0;
+        }
+
+        &Text {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-top: 50px;
+            text-align: justify;
+            color: #f2f0f0;
+        }
     }
 }
 
@@ -305,6 +401,42 @@ body {
         }
     }
 
+
+    .slider {
+        display: flex;
+        flex-direction: column-reverse;
+
+
+        &Container {
+            width: 100%;
+            margin: 0;
+        }
+
+        &Info {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            color: #f2f0f0;
+            padding: 50px 20px;
+            background-color: #2f2c2c;
+
+            &Title {
+                font-size: 50px;
+                text-align: center;
+                margin: 0;
+            }
+
+            &Text {
+                font-size: 16px;
+                line-height: 1.5;
+                margin-top: 50px;
+                text-align: justify;
+            }
+
+        }
+    }
+
 }
 
 @media only screen and (max-device-width: 874px) {
@@ -328,14 +460,17 @@ body {
         &Portfolio {
             &Container {
                 flex-direction: column;
+                width: 100%;
+                margin: 0 auto;
 
                 &Item {
-                    margin: 0 auto;
                     flex-direction: column;
                     justify-content: center;
 
                     &Images {
-                        margin: 50px 0;
+                        margin: 0 auto 40px;
+                        width: 100%;
+                        max-width: 450px;
 
                         &:hover>img {
                             transform: scale(1);
@@ -347,6 +482,67 @@ body {
                         }
                     }
                 }
+            }
+
+        }
+    }
+
+    .modalContainer {
+
+        width: 100%;
+        height: 100%;
+        max-width: unset;
+        margin: 0;
+        display: flex;
+        flex-direction: column-reverse;
+
+        &Close {
+            padding: 20px;
+            width: 30px;
+            height: 30px;
+            z-index: 1100;
+            color: #f2f0f0;
+            position: absolute;
+            top: 0;
+            right: 10px;
+            overflow: hidden;
+        }
+
+        &Picture {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 50%;
+
+            &Item {
+
+                img {
+                    max-width: 100%;
+                }
+            }
+
+        }
+
+        &Infos {
+            padding: 20px 10px;
+            width: 100%;
+            height: 50%;
+            margin: 0 0 10px 0;
+
+            &Title {
+                font-size: 50px;
+                text-align: center;
+                margin: 0;
+                color: #f2f0f0;
+            }
+
+            &Text {
+                font-size: 16px;
+                line-height: 1.5;
+                margin-top: 50px;
+                text-align: justify;
+                color: #f2f0f0;
             }
         }
     }
