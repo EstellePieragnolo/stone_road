@@ -57,22 +57,42 @@ body {
       margin-bottom: 300px; }
 
 .creationsDescription {
-  width: 70%;
-  margin: 80px auto;
   display: flex;
-  flex-direction: column;
-  justify-content: center; }
-  .creationsDescriptionTitle {
-    font-size: 50px;
-    text-align: center;
-    color: #2f2c2c;
-    margin: 0; }
-  .creationsDescriptionText {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #2f2c2c;
-    margin-top: 50px;
-    text-align: justify; }
+  flex-direction: row;
+  margin: 40px 0 40px 40px;
+  position: relative; }
+  .creationsDescriptionContainer {
+    width: 100%;
+    margin: 30px 250px 80px 150px; }
+    .creationsDescriptionContainerTitle {
+      font-size: 50px;
+      text-align: center;
+      color: #2f2c2c;
+      border: 2px solid #2f2c2c;
+      /* position: absolute; */
+      top: 0;
+      font-weight: 300;
+      right: 0;
+      padding: 40px 60px;
+      /* margin: 30px 200px 0 0; */
+      position: absolute;
+      height: fit-content;
+      width: fit-content;
+      top: 30px;
+      right: 150px; }
+    .creationsDescriptionContainerText {
+      font-size: 25px;
+      font-weight: 300;
+      line-height: 1.5;
+      color: #2f2c2c;
+      margin-top: 50px;
+      text-align: justify;
+      line-height: 1.8;
+      margin: 50px 150px 0px 0; }
+  .creationsDescriptionBorder {
+    background-color: #d39f03;
+    width: 400px;
+    display: block; }
 .creationsPortfolio {
   background-color: #2f2c2c;
   position: relative; }

@@ -67,23 +67,45 @@ body {
 
 .creations {
     &Description {
-        width: 70%;
-        margin: 80px auto;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        &Title {
-            font-size: 50px;
-            text-align: center;
-            color: #2f2c2c;
-            margin: 0;
+        flex-direction: row;
+        margin: 40px 0 40px 40px;
+        position: relative;
+        &Container {
+            width: 100%;
+            margin: 30px 250px 80px 150px;
+            &Title {
+                font-size: 50px;
+                text-align: center;
+                color: #2f2c2c;
+                border: 2px solid #2f2c2c;
+                /* position: absolute; */
+                top: 0;
+                font-weight: 300;
+                right: 0;
+                padding: 40px 60px;
+                /* margin: 30px 200px 0 0; */
+                position: absolute;
+                height: fit-content;
+                width: fit-content;
+                top: 30px;
+                right: 150px;
+            }
+            &Text {
+                font-size: 25px;
+                font-weight: 300;
+                line-height: 1.5;
+                color: #2f2c2c;
+                margin-top: 50px;
+                text-align: justify;
+                line-height: 1.8;
+                margin: 50px 150px 0px 0;
+            }
         }
-        &Text {
-            font-size: 16px;
-            line-height: 1.5;
-            color: #2f2c2c;
-            margin-top: 50px;
-            text-align: justify;
+        &Border {
+            background-color: #d39f03;
+            width: 400px;
+            display: block;
         }
     }
     &Portfolio {
