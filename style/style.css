@@ -2,8 +2,11 @@ html,
 body {
   margin: 0;
   border: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   background-color: #f2f0f0; }
+  html ::-webkit-scrollbar,
+  body ::-webkit-scrollbar {
+    display: none; }
 
 * {
   box-sizing: border-box;
@@ -16,10 +19,10 @@ body {
   .headerContainerBgImage {
     width: 100%;
     height: 100%;
-    background-image: url("../src/header.JPG");
+    background-image: url("../src/header.jpg");
     background-size: cover;
     background-position: center;
-    filter: blur(8px) grayscale(100%);
+    filter: blur(1px) grayscale(100%);
     -webkit-filter: blur(1px) grayscale(100%);
     -webkit-animation: zoomin 8s linear;
     animation: zoomin 4s linear;
@@ -37,18 +40,21 @@ body {
   .headerContainerTitle {
     display: flex;
     justify-content: center;
+    border: 2px solid #d39f03;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    width: calc(100vw - 60px);
+    height: calc(100vh - 60px);
     text-align: center;
-    font-size: 100px;
     position: absolute;
-    top: -225px;
-    margin: 0;
+    top: 0;
+    margin: 30px;
     z-index: 2;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #f2f0f0; }
+    text-transform: uppercase; }
+    .headerContainerTitle h1 {
+      font-weight: 300;
+      color: #d39f03;
+      font-size: 100px;
+      margin-bottom: 300px; }
 
 .creationsDescription {
   width: 70%;
