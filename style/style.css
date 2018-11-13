@@ -3,10 +3,8 @@ body {
   margin: 0;
   border: 0;
   font-family: 'Open Sans Condensed', sans-serif;
-  background-color: #f2f0f0; }
-  html ::-webkit-scrollbar,
-  body ::-webkit-scrollbar {
-    display: none; }
+  background-color: #f2f0f0;
+  -webkit-overflow-scrolling: touch; }
 
 * {
   box-sizing: border-box;
@@ -24,8 +22,8 @@ body {
     background-position: center;
     filter: blur(1px) grayscale(100%);
     -webkit-filter: blur(1px) grayscale(100%);
-    -webkit-animation: zoomin 8s linear;
-    animation: zoomin 4s linear;
+    -webkit-animation: zoomin 28s linear;
+    animation: zoomin 28s linear infinite;
     overflow: hidden;
     transform: scale(1.3); }
     .headerContainerBgImageOverlay {
@@ -53,8 +51,10 @@ body {
     .headerContainerTitle h1 {
       font-weight: 300;
       color: #d39f03;
-      font-size: 100px;
-      margin-bottom: 300px; }
+      font-size: 96px;
+      margin-bottom: 430px;
+      letter-spacing: 11px;
+      overflow: hidden; }
 
 .creationsDescription {
   display: flex;
@@ -97,15 +97,13 @@ body {
   background-color: #2f2c2c;
   position: relative; }
   .creationsPortfolioContainer {
-    width: 70%;
-    margin: 0 auto; }
+    width: 100%; }
     .creationsPortfolioContainerItem {
       display: flex;
       justify-content: center;
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: space-around;
-      margin: 100px 0; }
+      justify-content: space-around; }
       .creationsPortfolioContainerItemImages {
         -webkit-filter: grayscale(0);
         filter: grayscale(0);
@@ -114,10 +112,8 @@ body {
         cursor: pointer;
         overflow: hidden;
         width: 250px;
-        margin: 40px 20px;
-        -webkit-box-shadow: 0px 0px 50px 3px rgba(0, 0, 0, 0.69);
-        -moz-box-shadow: 0px 0px 50px 3px rgba(0, 0, 0, 0.69);
-        box-shadow: 0px 0px 50px 3px rgba(0, 0, 0, 0.69); }
+        width: calc(100% / 3);
+        padding: 40px; }
         .creationsPortfolioContainerItemImages img {
           -webkit-transition: .4s ease-in-out;
           transition: .4s ease-in-out;
@@ -126,14 +122,10 @@ body {
           cursor: default;
           border: none;
           width: 250px; }
-        .creationsPortfolioContainerItemImages:hover {
-          -webkit-filter: grayscale(80%);
-          filter: grayscale(80%); }
-        .creationsPortfolioContainerItemImages:hover > img {
-          transform: scale(1.1); }
       .creationsPortfolioContainerItem #aria {
         margin: 0;
-        width: 290px;
+        padding: 0;
+        width: calc(100% / 3);
         box-shadow: unset !important;
         -webkit-box-shadow: unset !important;
         -moz-box-shadow: unset !important; }
@@ -166,7 +158,8 @@ body {
       font-size: 50px;
       text-align: center;
       color: #2f2c2c;
-      margin: 0; }
+      margin: 0;
+      overflow: hidden; }
     .presentationContainerParagraphText {
       font-size: 16px;
       line-height: 1.5;
@@ -184,7 +177,8 @@ body {
       font-size: 50px;
       text-align: center;
       color: #cecccc;
-      margin: 0; }
+      margin: 0;
+      overflow: hidden; }
     .sliderHeaderText {
       font-size: 16px;
       line-height: 1.5;
@@ -389,10 +383,6 @@ body {
     font-size: 50px;
     padding: 0 20px; }
 
-  .CreationsDescription {
-    margin: 80px 0;
-    width: 100%;
-    padding: 0 10px; }
   .CreationsPortfolioContainer {
     flex-direction: column;
     width: 100%;
@@ -453,8 +443,14 @@ body {
   0% {
     -webkit-transform: scale(1.1);
     transform: scale(1.1); }
-  100% {
+  47% {
     -webkit-transform: scale(1.3);
-    transform: scale(1.3); } }
+    transform: scale(1.3); }
+  50% {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3); }
+  100% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); } }
 
 /*# sourceMappingURL=style.css.map */
