@@ -98,7 +98,7 @@ body {
 .creationsPortfolio {
   background-color: #f2f0f0;
   position: relative;
-  margin: 0 -5px; }
+  margin: 0 80px; }
   .creationsPortfolioContainer {
     width: 100%; }
     .creationsPortfolioContainerItem {
@@ -114,9 +114,9 @@ body {
         transition: .2s ease-in-out;
         cursor: pointer;
         overflow: hidden;
-        width: calc((100% / 3) - 10px);
+        width: calc((100% / 3) - 20px);
         position: relative;
-        margin: 5px; }
+        margin: 10px; }
         .creationsPortfolioContainerItemImages img {
           -webkit-transition: .4s ease-in-out;
           transition: .4s ease-in-out;
@@ -129,11 +129,26 @@ body {
           margin: 20px;
           border: 1px solid #d39f03;
           top: 0;
-          left: 0; }
+          left: 0;
+          background-color: rgba(0, 0, 0, 0);
+          transition: margin 0.4s, width 0.4s, height 0.4s, border 0.4s, background-color 0.4s; }
+          .creationsPortfolioContainerItemImagesBorder:hover {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            border: 25px solid #d39f03;
+            background-color: rgba(0, 0, 0, 0.3);
+            top: 0;
+            left: 0; }
         .creationsPortfolioContainerItemImages i[aria-hidden=true] {
           cursor: default;
           border: none;
           width: 250px; }
+        .creationsPortfolioContainerItemImages:hover > img {
+          -webkit-filter: grayscale(80%);
+          filter: grayscale(80%); }
+        .creationsPortfolioContainerItemImages:hover > img {
+          transform: scale(1.1); }
       .creationsPortfolioContainerItem #aria {
         margin: 0;
         padding: 0;
