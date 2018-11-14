@@ -15,10 +15,13 @@ body {
 }
 
 .header {
+    overflow: hidden;
+
     &Container {
         width: 100vw;
         height: 100vh;
         overflow: hidden;
+
         &BgImage {
             width: 100%;
             height: 100%;
@@ -31,6 +34,7 @@ body {
             animation: zoomin 28s linear infinite;
             overflow: hidden;
             transform: scale(1.3);
+
             &Overlay {
                 position: absolute;
                 top: 0;
@@ -42,6 +46,7 @@ body {
                 overflow: hidden;
             }
         }
+
         &Title {
             display: flex;
             justify-content: center;
@@ -55,6 +60,7 @@ body {
             margin: 30px;
             z-index: 2;
             text-transform: uppercase;
+
             h1 {
                 font-weight: 300;
                 color: #d39f03;
@@ -73,9 +79,11 @@ body {
         flex-direction: row;
         margin: 40px 0 40px 40px;
         position: relative;
+
         &Container {
             width: 100%;
             margin: 30px 250px 80px 150px;
+
             &Title {
                 font-size: 50px;
                 text-align: center;
@@ -93,6 +101,7 @@ body {
                 top: 30px;
                 right: 150px;
             }
+
             &Text {
                 font-size: 25px;
                 font-weight: 300;
@@ -104,23 +113,30 @@ body {
                 margin: 50px 150px 0px 0;
             }
         }
+
         &Border {
             background-color: #d39f03;
             width: 400px;
             display: block;
         }
     }
+
     &Portfolio {
-        background-color: #2f2c2c;
+        background-color: #f2f0f0;
         position: relative;
+        margin: 0 -5px;
+
         &Container {
             width: 100%;
+
             &Item {
                 display: flex;
                 justify-content: center;
                 flex-direction: row;
                 flex-wrap: wrap;
                 justify-content: space-around;
+
+
                 &Images {
                     -webkit-filter: grayscale(0);
                     filter: grayscale(0);
@@ -128,19 +144,35 @@ body {
                     transition: .2s ease-in-out;
                     cursor: pointer;
                     overflow: hidden;
-                    width: 250px;
-                    width: calc(100% / 3);
-                    padding: 40px;
+                    width: calc((100% / 3) - 10px);
+                    position: relative;
+                    margin: 5px;
+
+
                     img {
                         -webkit-transition: .4s ease-in-out;
                         transition: .4s ease-in-out;
                         width: 100%;
                     }
+
+                    &Border {
+                        position: absolute;
+                        display: block;
+                        width: calc(100% - 40px);
+                        height: calc(100% - 40px);
+                        margin: 20px;
+                        border: 1px solid #d39f03;
+                        top: 0;
+                        left: 0;
+                    }
+
                     i[aria-hidden=true] {
                         cursor: default;
                         border: none;
                         width: 250px;
-                    } // &:hover {
+                    }
+
+                    // &:hover {
                     //     -webkit-filter: grayscale(80%);
                     //     filter: grayscale(80%);
                     // }
@@ -148,6 +180,7 @@ body {
                     //     transform: scale(1.1);
                     // }
                 }
+
                 #aria {
                     margin: 0;
                     padding: 0;
@@ -167,32 +200,39 @@ body {
         flex-direction: row;
         justify-content: center;
         margin: 60px 0;
+
         &Picture {
             display: flex;
             flex-direction: column;
             justify-content: center;
             width: 25%;
+
             span {
                 border-radius: 50%;
                 width: 150px;
                 height: 150px;
             }
+
             &Orianne {
                 background-image: url("../src/us/orianne.jpg");
                 background-size: cover;
             }
+
             &Simon {
                 // background-image: url("http://lorempicsum.com/up/350/200/1");
                 background-size: cover;
             }
+
             &Louis {
                 // background-image: url("http://lorempicsum.com/up/255/200/5");
                 background-size: cover;
             }
         }
+
         &Paragraph {
             width: 50%;
             margin: 20px 0;
+
             &Title {
                 font-size: 50px;
                 text-align: center;
@@ -200,6 +240,7 @@ body {
                 margin: 0;
                 overflow: hidden;
             }
+
             &Text {
                 font-size: 16px;
                 line-height: 1.5;
@@ -214,9 +255,11 @@ body {
 .slider {
     background-color: #2f2c2c;
     height: 750px;
+
     &Header {
         width: 80%;
         margin: 80px auto 0;
+
         &Title {
             font-size: 50px;
             text-align: center;
@@ -224,6 +267,7 @@ body {
             margin: 0;
             overflow: hidden;
         }
+
         &Text {
             font-size: 16px;
             line-height: 1.5;
@@ -233,21 +277,27 @@ body {
             font-weight: 400;
         }
     }
+
     &Container {
         display: flex;
         align-items: center;
         margin: 0 0 20px 0;
+
         &Inner {
             height: 500px;
+
             &Item {
                 padding: 0 130px;
+
                 &Block {
                     display: flex;
                     flex-direction: row;
                     margin: auto;
+
                     &Img {
                         width: 100%;
                         height: 100%;
+
                         img {
                             position: absolute;
                             left: 50%;
@@ -260,7 +310,9 @@ body {
                             -moz-box-shadow: 0px 0px 50px 3px rgba(0, 0, 0, 0.69);
                             box-shadow: 0px 0px 50px 3px rgba(0, 0, 0, 0.69);
                         }
-                    } // &Info {
+                    }
+
+                    // &Info {
                     //     width: 50%;
                     //     margin: 30px 0 30px 60px;
                     //     color: #cecccc;
@@ -272,6 +324,7 @@ body {
             }
         }
     }
+
     &Info {
         margin: 40px 0;
         display: flex;
@@ -279,11 +332,13 @@ body {
         flex-direction: column;
         color: #f2f0f0;
         padding: 0 40px;
+
         &Title {
             font-size: 35px;
             text-align: center;
             margin: 0;
         }
+
         &Text {
             font-size: 16px;
             line-height: 1.5;
@@ -297,11 +352,13 @@ body {
     &Container {
         color: #2f2c2c;
         margin: 80px 0;
+
         &Title {
             font-size: 50px;
             text-align: center;
             margin: 0;
         }
+
         &Text {
             font-size: 16px;
             line-height: 1.5;
@@ -320,6 +377,7 @@ body {
     margin: 5% 10%;
     display: flex;
     flex-direction: row;
+
     &Close {
         margin: 20px 0 0;
         width: 30px;
@@ -330,32 +388,39 @@ body {
         top: 0;
         right: 10px;
         cursor: pointer;
+
         &:hover {
             color: #2f2c2c;
         }
     }
+
     &Picture {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
         margin: 40px;
+
         &Item {
             margin: 0 auto;
+
             img {
                 max-width: calc(100% - 80px);
             }
         }
     }
+
     &Infos {
         margin: 30px;
         width: 50%;
+
         &Title {
             font-size: 50px;
             text-align: center;
             margin: 0;
             color: #f2f0f0;
         }
+
         &Text {
             font-size: 16px;
             line-height: 1.5;
@@ -371,12 +436,14 @@ body {
         display: flex;
         justify-content: center;
         flex-direction: column;
+
         &Title {
             font-size: 50px;
             text-align: center;
             margin: 0;
             color: #2f2c2c;
         }
+
         &Text {
             margin: 80px 0 0 !important;
             font-size: 16px;
@@ -384,16 +451,19 @@ body {
             text-align: center;
             color: #2f2c2c;
             margin: 0 auto;
+
             span {
                 font-weight: bold;
             }
         }
+
         a {
             padding-top: 40px !important;
             text-align: center;
             color: #2f2c2c;
             text-decoration: none;
             font-weight: bolder;
+
             &:hover {
                 color: #797777;
             }
@@ -408,9 +478,11 @@ body {
                 &Orianne {
                     margin: -5% 0 0 17%;
                 }
+
                 &Simon {
                     margin: 5% 0 -5% 40%;
                 }
+
                 &Louis {
                     margin: -33% 0 0 23%;
                 }
@@ -426,9 +498,11 @@ body {
                 &Orianne {
                     margin: 40px auto;
                 }
+
                 &Simon {
                     margin: 40px auto;
                 }
+
                 &Louis {
                     margin: 40px auto 100px;
                 }
@@ -441,21 +515,26 @@ body {
     .presentation {
         &Container {
             flex-direction: column;
+
             &Picture {
                 flex-direction: row;
                 order: 2;
                 width: 100%;
                 padding: 0 10px;
+
                 &Orianne {
                     margin: 10px auto;
                 }
+
                 &Simon {
                     margin: 10px auto;
                 }
+
                 &Louis {
                     margin: 10px auto;
                 }
             }
+
             &Paragraph {
                 order: 1;
                 width: 100%;
@@ -463,23 +542,28 @@ body {
             }
         }
     }
+
     .slider {
         display: flex;
         flex-direction: column;
         height: unset;
+
         &Header {
             height: unset;
             width: 100%;
             padding: 0 10px;
             margin: 80px 0 20px;
         }
+
         &Container {
             width: 100%;
             margin: 0 0 30px 0;
+
             &Inner {
                 height: 400px;
             }
         }
+
         &Info {
             display: flex;
             justify-content: center;
@@ -488,11 +572,13 @@ body {
             color: #f2f0f0;
             padding: 50px 20px;
             background-color: #2f2c2c;
+
             &Title {
                 font-size: 50px;
                 text-align: center;
                 margin: 0;
             }
+
             &Text {
                 font-size: 16px;
                 line-height: 1.5;
@@ -512,7 +598,9 @@ body {
             }
         }
     }
+
     .Creations {
+
         // &Description {
         //     margin: 80px 0;
         //     width: 100%;
@@ -523,16 +611,20 @@ body {
                 flex-direction: column;
                 width: 100%;
                 margin: 0 auto;
+
                 &Item {
                     flex-direction: column;
                     justify-content: center;
+
                     &Images {
                         margin: 0 auto 40px;
                         width: 100%;
                         max-width: 450px;
+
                         &:hover>img {
                             transform: scale(1);
                         }
+
                         &:hover {
                             -webkit-filter: grayscale(0);
                             filter: grayscale(0);
@@ -542,6 +634,7 @@ body {
             }
         }
     }
+
     .modalContainer {
         width: 100vw;
         height: 100vh;
@@ -549,6 +642,7 @@ body {
         margin: 0;
         display: flex;
         flex-direction: column-reverse;
+
         &Close {
             padding: 20px;
             width: 30px;
@@ -560,6 +654,7 @@ body {
             right: 10px;
             overflow: hidden;
         }
+
         &Picture {
             display: flex;
             justify-content: center;
@@ -567,17 +662,20 @@ body {
             width: 100%;
             height: 100%;
         }
+
         &Infos {
             padding: 20px 10px;
             width: 100%;
             height: 50%;
             margin: 0 0 10px 0;
+
             &Title {
                 font-size: 50px;
                 text-align: center;
                 margin: 0;
                 color: #f2f0f0;
             }
+
             &Text {
                 font-size: 16px;
                 line-height: 1.5;
@@ -595,14 +693,17 @@ body {
         -webkit-transform: scale(1.1);
         transform: scale(1.1);
     }
+
     47% {
         -webkit-transform: scale(1.3);
         transform: scale(1.3);
     }
+
     50% {
         -webkit-transform: scale(1.3);
         transform: scale(1.3);
     }
+
     100% {
         -webkit-transform: scale(1.1);
         transform: scale(1.1);
