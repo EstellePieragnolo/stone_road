@@ -174,9 +174,23 @@ body {
                             height: 100%;
                             margin: 0;
                             border: 25px solid #d39f03;
-                            background-color: rgba(0, 0, 0, 0.3);
+                            background-color: rgba(0, 0, 0, 0.5);
                             top: 0;
                             left: 0;
+                        }
+
+                        &:hover>figcaption {
+                            position: absolute;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            color: #d39f03;
+                            font-size: 40px;
+                            font-weight: 300;
                         }
                     }
 
@@ -195,6 +209,13 @@ body {
                         transform: scale(1.1);
                     }
 
+
+
+                    figcaption {
+                        display: none;
+
+
+                    }
 
                 }
 
@@ -388,10 +409,10 @@ body {
 // Modal
 .modalContainer {
     background-color: #2f2c2c;
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     max-width: unset;
-    margin: 5% 10%;
+    margin: 0;
     display: flex;
     flex-direction: row;
 
