@@ -308,11 +308,24 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 40px; }
+    margin: 80px;
+    position: relative; }
     .modalContainerPictureItem {
-      margin: 0 auto; }
+      margin: 0 auto;
+      width: 100%; }
       .modalContainerPictureItem img {
-        max-width: calc(100% - 80px); }
+        width: 60%;
+        margin-top: 40px; }
+      .modalContainerPictureItemBorder {
+        position: absolute;
+        display: block;
+        width: calc(100% - 40px);
+        height: 80%;
+        margin: 40px 40px 0;
+        border: 1px solid #d39f03;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0); }
   .modalContainerInfos {
     margin: 30px;
     width: 50%; }
