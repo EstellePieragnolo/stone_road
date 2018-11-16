@@ -3,13 +3,33 @@ body {
   margin: 0;
   border: 0;
   font-family: 'Open Sans Condensed', sans-serif;
-  background-color: #f2f0f0;
+  background-color: #2f2c2c;
   -webkit-overflow-scrolling: touch; }
 
-* {
-  box-sizing: border-box;
+body {
   overflow-x: hidden; }
 
+* {
+  box-sizing: border-box; }
+
+@-webkit-keyframes titleEnter {
+  0% {
+    opacity: 0;
+    -webkit-transform: translatey(-70px);
+    -moz-transform: translatey(-70px);
+    -o-transform: translatey(-70px);
+    transform: translatey(-70px); }
+  30% {
+    opacity: 0;
+    -webkit-transform: translatey(-70px);
+    -moz-transform: translatey(-70px);
+    -o-transform: translatey(-70px);
+    transform: translatey(-70px); }
+  100% {
+    -webkit-transform: translatey(0);
+    -moz-transform: translatey(0);
+    -o-transform: translatey(0);
+    transform: translatey(0); } }
 .header {
   overflow: hidden; }
   .headerContainer {
@@ -24,7 +44,7 @@ body {
       background-position: center;
       filter: blur(1px) grayscale(100%);
       -webkit-filter: blur(1px) grayscale(100%);
-      -webkit-animation: zoomin 28s linear;
+      -webkit-animation: zoomin 28s linear infinite;
       animation: zoomin 28s linear infinite;
       overflow: hidden;
       transform: scale(1.3); }
@@ -40,65 +60,67 @@ body {
     .headerContainerTitle {
       display: flex;
       justify-content: center;
-      border: 2px solid #d39f03;
-      align-items: center;
+      border: 1px solid #dce029;
+      align-items: flex-start;
       width: calc(100vw - 60px);
       height: calc(100vh - 60px);
       text-align: center;
       position: absolute;
       top: 0;
       margin: 30px;
+      padding-top: 6%;
       z-index: 2;
       text-transform: uppercase; }
       .headerContainerTitle h1 {
         font-weight: 300;
-        color: #d39f03;
-        font-size: 96px;
-        margin-bottom: 430px;
+        color: #dce029;
+        font-size: 80px;
         letter-spacing: 11px;
-        overflow: hidden; }
+        overflow: hidden;
+        -webkit-animation: titleEnter 3s linear;
+        -moz-animation: titleEnter 3s linear;
+        -o-animation: titleEnter 3s linear;
+        animation: titleEnter 3s linear; }
 
 .creationsDescription {
   display: flex;
   flex-direction: row;
-  margin: 40px 0 40px 40px;
-  position: relative; }
+  margin: 80px 0 40px 40px; }
   .creationsDescriptionContainer {
-    width: 100%;
-    margin: 30px 250px 80px 150px; }
+    margin: 0 80px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
     .creationsDescriptionContainerTitle {
-      font-size: 50px;
+      font-size: 70px;
       text-align: center;
-      color: #2f2c2c;
-      border: 2px solid #2f2c2c;
-      /* position: absolute; */
-      top: 0;
+      color: #e0e0e0;
       font-weight: 300;
-      right: 0;
-      padding: 40px 60px;
-      /* margin: 30px 200px 0 0; */
-      position: absolute;
-      height: fit-content;
-      width: fit-content;
-      top: 30px;
-      right: 150px; }
+      position: relative;
+      margin: 0 auto;
+      z-index: 1; }
+      .creationsDescriptionContainerTitle:after {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        width: 100%;
+        background-color: #dce029;
+        height: 7px;
+        bottom: 9px;
+        right: 0;
+        z-index: -1; }
     .creationsDescriptionContainerText {
-      font-size: 25px;
+      font-size: 20px;
       font-weight: 300;
       line-height: 1.5;
-      color: #2f2c2c;
+      color: #e1dbdb;
       margin-top: 50px;
       text-align: justify;
-      line-height: 1.8;
-      margin: 50px 150px 0px 0; }
-  .creationsDescriptionBorder {
-    background-color: #d39f03;
-    width: 400px;
-    display: block; }
+      line-height: 1.8; }
 .creationsPortfolio {
-  background-color: #f2f0f0;
+  background-color: #2f2c2c;
   position: relative;
-  margin: 0 80px; }
+  margin: 0; }
   .creationsPortfolioContainer {
     width: 100%; }
     .creationsPortfolioContainerItem {
@@ -114,9 +136,9 @@ body {
         transition: .2s ease-in-out;
         cursor: pointer;
         overflow: hidden;
-        width: calc((100% / 3) - 20px);
+        width: calc(100% / 3);
         position: relative;
-        margin: 10px; }
+        margin: 0; }
         .creationsPortfolioContainerItemImages img {
           -webkit-transition: .4s ease-in-out;
           transition: .4s ease-in-out;
@@ -127,7 +149,7 @@ body {
           width: calc(100% - 40px);
           height: calc(100% - 40px);
           margin: 20px;
-          border: 1px solid #d39f03;
+          border: 1px solid #dce029;
           top: 0;
           left: 0;
           background-color: rgba(0, 0, 0, 0);
@@ -136,7 +158,7 @@ body {
             width: 100%;
             height: 100%;
             margin: 0;
-            border: 25px solid #d39f03;
+            border: 25px solid #dce029;
             background-color: rgba(0, 0, 0, 0.5);
             top: 0;
             left: 0; }
@@ -149,9 +171,10 @@ body {
             left: 0;
             width: 100%;
             height: 100%;
-            color: #d39f03;
+            color: #dce029;
             font-size: 40px;
-            font-weight: 300; }
+            font-weight: 300;
+            white-space: nowrap; }
         .creationsPortfolioContainerItemImages i[aria-hidden=true] {
           cursor: default;
           border: none;
@@ -171,42 +194,60 @@ body {
         -webkit-box-shadow: unset !important;
         -moz-box-shadow: unset !important; }
 
-.presentationContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: 60px 0; }
-  .presentationContainerPicture {
+.presentation {
+  background-color: #e1dbdb;
+  padding: 80px 0; }
+  .presentationContainer {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 25%; }
-    .presentationContainerPicture span {
-      border-radius: 50%;
-      width: 150px;
-      height: 150px; }
-    .presentationContainerPictureOrianne {
-      background-image: url("../src/us/orianne.jpg");
-      background-size: cover; }
-    .presentationContainerPictureSimon {
-      background-size: cover; }
-    .presentationContainerPictureLouis {
-      background-size: cover; }
-  .presentationContainerParagraph {
-    width: 50%;
-    margin: 20px 0; }
-    .presentationContainerParagraphTitle {
-      font-size: 50px;
-      text-align: center;
-      color: #2f2c2c;
-      margin: 0;
-      overflow: hidden; }
-    .presentationContainerParagraphText {
-      font-size: 16px;
-      line-height: 1.5;
-      color: #2f2c2c;
-      margin-top: 50px;
-      text-align: justify; }
+    flex-direction: row;
+    justify-content: center; }
+    .presentationContainerPicture {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 25%; }
+      .presentationContainerPicture span {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px; }
+      .presentationContainerPictureOrianne {
+        background-image: url("../src/us/orianne.jpg");
+        background-size: cover; }
+      .presentationContainerPictureSimon {
+        background-size: cover; }
+      .presentationContainerPictureLouis {
+        background-size: cover; }
+    .presentationContainerParagraph {
+      margin: 0 150px 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      .presentationContainerParagraphTitle {
+        font-size: 70px;
+        text-align: center;
+        color: #2f2c2c;
+        font-weight: 300;
+        position: relative;
+        margin: 0 auto;
+        z-index: 1; }
+        .presentationContainerParagraphTitle:after {
+          content: '';
+          position: absolute;
+          display: inline-block;
+          width: 100%;
+          background-color: #dce029;
+          height: 9px;
+          bottom: 9px;
+          right: 0;
+          z-index: -1; }
+      .presentationContainerParagraphText {
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 1.5;
+        color: #2f2c2c;
+        margin-top: 50px;
+        text-align: justify;
+        line-height: 1.8; }
 
 .slider {
   background-color: #2f2c2c;
@@ -314,15 +355,14 @@ body {
       margin: 0 auto;
       width: 100%; }
       .modalContainerPictureItem img {
-        width: 60%;
-        margin-top: 40px; }
+        max-width: 70%; }
       .modalContainerPictureItemBorder {
         position: absolute;
         display: block;
         width: calc(100% - 40px);
-        height: 80%;
+        height: 75%;
         margin: 40px 40px 0;
-        border: 1px solid #d39f03;
+        border: 1px solid #dce029;
         top: 0;
         left: 0;
         background-color: rgba(0, 0, 0, 0); }
@@ -341,32 +381,34 @@ body {
       text-align: justify;
       color: #f2f0f0; }
 
-.contactContainer {
-  display: flex;
-  justify-content: center;
-  flex-direction: column; }
-  .contactContainerTitle {
-    font-size: 50px;
-    text-align: center;
-    margin: 0;
-    color: #2f2c2c; }
-  .contactContainerText {
-    margin: 80px 0 0 !important;
-    font-size: 16px;
-    line-height: 1.5;
-    text-align: center;
-    color: #2f2c2c;
-    margin: 0 auto; }
-    .contactContainerText span {
-      font-weight: bold; }
-  .contactContainer a {
-    padding-top: 40px !important;
-    text-align: center;
-    color: #2f2c2c;
-    text-decoration: none;
-    font-weight: bolder; }
-    .contactContainer a:hover {
-      color: #797777; }
+.contact {
+  background-color: #e1dbdb; }
+  .contactContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; }
+    .contactContainerTitle {
+      font-size: 50px;
+      text-align: center;
+      margin: 0;
+      color: #2f2c2c; }
+    .contactContainerText {
+      margin: 80px 0 0 !important;
+      font-size: 16px;
+      line-height: 1.5;
+      text-align: center;
+      color: #2f2c2c;
+      margin: 0 auto; }
+      .contactContainerText span {
+        font-weight: bold; }
+    .contactContainer a {
+      padding-top: 40px !important;
+      text-align: center;
+      color: #2f2c2c;
+      text-decoration: none;
+      font-weight: bolder; }
+      .contactContainer a:hover {
+        color: #797777; }
 
 @media only screen and (min-device-width: 1045px) {
   .presentationContainerPictureOrianne {
