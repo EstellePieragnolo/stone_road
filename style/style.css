@@ -252,22 +252,18 @@ body {
 .sliderContainer {
   display: flex;
   flex-direction: row; }
-  .sliderContainerItems {
-    height: 200px; }
-    .sliderContainerItemsPictures {
-      width: fit-content;
-      height: 200px; }
-      .sliderContainerItemsPictures img {
-        height: 200px;
-        filter: grayscale(100%);
-        -webkit-filter: grayscale(100%); }
-      .sliderContainerItemsPictures:hover {
-        z-index: 1000; }
-      .sliderContainerItemsPictures:hover > img {
-        filter: grayscale(0%);
-        -webkit-filter: grayscale(0%);
-        padding-bottom: 50px;
-        transform: scale(2); }
+  .sliderContainerPictures img {
+    height: 200px;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%); }
+  .sliderContainerPictures:hover {
+    z-index: 1000;
+    transform: scale(1.5);
+    -webkit-transition: .2s ease;
+    transition: .2s ease; }
+  .sliderContainerPictures:hover > img {
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%); }
 
 .contactContainer {
   color: #2f2c2c;
