@@ -83,20 +83,22 @@ body {
 
         &Title {
             display: flex;
+            flex-direction: column;
             justify-content: center;
-            border: 1px solid $white;
-            align-items: flex-start;
+            // border: 1px solid $white;
+            align-items: center;
             width: calc(100vw - 60px);
             height: calc(100vh - 60px);
             text-align: center;
             position: absolute;
-            top: 0;
+            top: 0px;
             margin: 30px;
             padding-top: 6%;
             z-index: 2;
             text-transform: uppercase;
 
             h1 {
+                margin-bottom: 400px;
                 font-weight: 300;
                 color: $white;
                 font-size: 80px;
@@ -106,6 +108,21 @@ body {
                 -moz-animation: titleEnter 3s linear;
                 -o-animation: titleEnter 3s linear;
                 animation: titleEnter 3s linear;
+            }
+
+            img {
+                width: 150px;
+                height: 150px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                background-color: rgba(0, 0, 0, 0.7);
+                -webkit-box-shadow: 0px 0px 50px 3px rgba(0, 0, 0, 1);
+                -moz-box-shadow: 0px 0px 50px 3px rgba(0, 0, 0, 1);
+                box-shadow: 0px 0px 50px 3px rgba(0, 0, 0, 1);
+
             }
         }
     }
