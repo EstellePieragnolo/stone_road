@@ -31,10 +31,11 @@ body {
     -o-transform: translatey(0);
     transform: translatey(0); } }
 .header {
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
   .headerContainer {
     width: 100vw;
-    height: calc(100vh - 39px);
+    height: calc(100vh - 90px);
     overflow: hidden; }
     .headerContainerBgImage {
       width: 100%;
@@ -81,35 +82,40 @@ body {
         -moz-animation: titleEnter 3s linear;
         -o-animation: titleEnter 3s linear;
         animation: titleEnter 3s linear; }
-      .headerContainerTitle img {
-        width: 150px;
-        height: 150px;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        border-radius: 50%;
-        background-color: rgba(0, 0, 0, 0.7);
-        -webkit-box-shadow: 0px 0px 50px 3px black;
-        -moz-box-shadow: 0px 0px 50px 3px black;
-        box-shadow: 0px 0px 50px 3px black; }
 
 .navbar {
   padding: 0;
-  position: sticky;
-  top: 0;
-  z-index: 2;
+  z-index: 999;
   width: 100vw;
-  height: 40px;
-  border-bottom: 1px solid #2f2c2c;
-  background-color: #FFF8F6; }
-  .navbarContainer {
+  height: 90px; }
+  .navbar.noSticky {
+    background-color: #E5DAD8;
+    align-items: center;
+    transition: position 0.6s ease-in, background-color 0.6s ease-in; }
+    .navbar.noSticky .container {
+      align-items: center;
+      height: 100%; }
+      .navbar.noSticky .container img {
+        width: 80px;
+        height: 80px;
+        background-color: #E5DAD8;
+        transition: height 0.4 ease-in, width 0.4 ease-in; }
+  .navbar.sticky {
+    position: sticky;
+    top: -50px;
+    background-color: #2f2c2c;
+    align-items: flex-end;
+    transition: position 0.6s ease-in, background-color 0.6s ease-in; }
+    .navbar.sticky .container {
+      height: 40px; }
+      .navbar.sticky .container img {
+        width: 30px;
+        height: 30px;
+        transition: height 0.4 ease-in, width 0.4 ease-in; }
+  .navbar .container {
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center; }
-    .navbarContainer p {
-      margin: 0; }
+    justify-content: center; }
 
 .creations {
   margin: 0 15px 80px;

@@ -20,16 +20,14 @@
             </div>
             <div class="headerContainerTitle">
                 <h1>La route de la pierre</h1>
-                <img src="src/logo.png" alt="Logo">
+
             </div>
         </div>
     </div>
 
-    <div class="navbar" id="nav">
-        <div class="navbarContainer">
-            <p>
-                LRDLP
-            </p>
+    <div class="navbar noSticky" id="nav">
+        <div class="container">
+            <img src="src/logo.png" alt="Logo">
         </div>
     </div>
 
@@ -418,12 +416,15 @@
         };
 
         function scrollFunction() {
-
-            if (document.body.scrollTop > 640 || document.documentElement.scrollTop > 640) {
-                document.getElementById("nav").style.height = "70px";
+            const viewHeight = (window.innerHeight - 40);
+            console.log(viewHeight);
+            if (document.body.scrollTop > viewHeight || document.documentElement.scrollTop > viewHeight) {
+                document.getElementById("nav").classList.add("sticky");
+                document.getElementById("nav").classList.remove("noSticky");
 
             } else {
-                document.getElementById("nav").style.height = "40px";
+                document.getElementById("nav").classList.remove("sticky");
+                document.getElementById("nav").classList.add("noSticky");
             }
         }
     </script>
