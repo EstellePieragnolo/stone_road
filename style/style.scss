@@ -54,7 +54,7 @@ body {
 
     &Container {
         width: 100vw;
-        height: 100vh;
+        height: calc(100vh - 39px);
         overflow: hidden;
 
         &BgImage {
@@ -126,6 +126,31 @@ body {
             }
         }
     }
+}
+
+.navbar {
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    width: 100vw;
+    height: 40px;
+    border-bottom: 1px solid $darkGrey;
+    background-color: $white;
+
+    &Container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+
+        p {
+            margin: 0;
+        }
+    }
+
 }
 
 .creations {

@@ -34,7 +34,7 @@ body {
   overflow: hidden; }
   .headerContainer {
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 39px);
     overflow: hidden; }
     .headerContainerBgImage {
       width: 100%;
@@ -93,6 +93,23 @@ body {
         -webkit-box-shadow: 0px 0px 50px 3px black;
         -moz-box-shadow: 0px 0px 50px 3px black;
         box-shadow: 0px 0px 50px 3px black; }
+
+.navbar {
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  width: 100vw;
+  height: 40px;
+  border-bottom: 1px solid #2f2c2c;
+  background-color: #FFF8F6; }
+  .navbarContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .navbarContainer p {
+      margin: 0; }
 
 .creations {
   margin: 0 15px 80px;
