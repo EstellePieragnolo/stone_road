@@ -271,14 +271,62 @@ body {
     position: relative;
     margin: 0; }
     .creationsPortfolioContainer {
-      width: 100%; }
-      .creationsPortfolioContainerItem {
+      max-width: 1000px;
+      margin: 0 auto; }
+      .creationsPortfolioContainerItemFirst {
         display: flex;
-        justify-content: center;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 15px; }
+        .creationsPortfolioContainerItemFirstImages {
+          flex-direction: column;
+          -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+          -webkit-transition: .2s ease-in-out;
+          transition: .2s ease-in-out;
+          cursor: pointer;
+          overflow: hidden;
+          position: relative;
+          margin: 0 0 0 15px;
+          width: calc(100% - 90px);
+          position: relative;
+          background-color: #E5DAD8; }
+          .creationsPortfolioContainerItemFirstImages img {
+            -webkit-transition: .4s ease-in-out;
+            transition: .4s ease-in-out;
+            width: 100%;
+            transform: scale(0.7); }
+        .creationsPortfolioContainerItemFirstSmall {
+          width: calc(100% / 2);
+          display: flex;
+          flex-direction: column; }
+          .creationsPortfolioContainerItemFirstSmallImages {
+            flex-direction: column;
+            -webkit-filter: grayscale(0);
+            filter: grayscale(0);
+            -webkit-transition: .2s ease-in-out;
+            transition: .2s ease-in-out;
+            cursor: pointer;
+            overflow: hidden;
+            position: relative;
+            margin: 0 15px 0 30px;
+            position: relative;
+            background-color: #E5DAD8; }
+            .creationsPortfolioContainerItemFirstSmallImages:first-child {
+              margin-bottom: 15px; }
+            .creationsPortfolioContainerItemFirstSmallImages:last-child {
+              margin-top: 15px; }
+            .creationsPortfolioContainerItemFirstSmallImages img {
+              -webkit-transition: .4s ease-in-out;
+              transition: .4s ease-in-out;
+              width: 100%;
+              transform: scale(0.7); }
+      .creationsPortfolioContainerItemSecond {
+        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around; }
-        .creationsPortfolioContainerItemImages {
+        .creationsPortfolioContainerItemSecondImages {
           -webkit-filter: grayscale(0);
           filter: grayscale(0);
           -webkit-transition: .2s ease-in-out;
@@ -290,59 +338,29 @@ body {
           margin: 15px 0;
           background-color: #E5DAD8;
           position: relative; }
-          .creationsPortfolioContainerItemImages img {
+          .creationsPortfolioContainerItemSecondImages img {
             -webkit-transition: .4s ease-in-out;
             transition: .4s ease-in-out;
             width: 100%;
             transform: scale(0.7); }
-          .creationsPortfolioContainerItemImagesBorder {
-            position: absolute;
-            display: block;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            background-color: rgba(0, 0, 0, 0);
-            transition: margin 0.4s, width 0.4s, height 0.4s, border 0.4s, background-color 0.4s; }
-            .creationsPortfolioContainerItemImagesBorder:hover {
-              width: 100%;
-              height: 100%;
-              border: 25px solid #C7D9AF;
-              background-color: rgba(0, 0, 0, 0.5);
-              top: 0;
-              left: 0; }
-            .creationsPortfolioContainerItemImagesBorder:hover > figcaption {
-              position: absolute;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              color: #C7D9AF;
-              font-size: 40px;
-              font-weight: 300;
-              white-space: nowrap;
-              transform: greyscale(100%); }
-          .creationsPortfolioContainerItemImages i[aria-hidden=true] {
-            cursor: default;
-            border: none;
-            width: 250px; }
-          .creationsPortfolioContainerItemImages:hover > img {
-            -webkit-filter: grayscale(80%);
-            filter: grayscale(80%); }
-          .creationsPortfolioContainerItemImages:hover > img {
-            transform: scale(1.1); }
-          .creationsPortfolioContainerItemImages figcaption {
-            display: none; }
-        .creationsPortfolioContainerItem #aria {
-          margin: 0;
-          padding: 0;
-          width: calc(100% / 3);
-          box-shadow: unset !important;
-          -webkit-box-shadow: unset !important;
-          -moz-box-shadow: unset !important; }
+        .creationsPortfolioContainerItemSecond i[aria-hidden=true] {
+          cursor: default;
+          border: none;
+          width: 250px; }
+        .creationsPortfolioContainerItemSecond:hover > img {
+          -webkit-filter: grayscale(80%);
+          filter: grayscale(80%); }
+        .creationsPortfolioContainerItemSecond:hover > img {
+          transform: scale(1.1); }
+        .creationsPortfolioContainerItemSecond figcaption {
+          display: none; }
+      .creationsPortfolioContainerItem #aria {
+        margin: 0;
+        padding: 0;
+        width: calc(100% / 3);
+        box-shadow: unset !important;
+        -webkit-box-shadow: unset !important;
+        -moz-box-shadow: unset !important; }
 
 .presentation {
   background-color: #FFF8F6;
