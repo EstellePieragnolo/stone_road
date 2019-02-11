@@ -1,8 +1,8 @@
 window.onscroll = function () {
-    scrollFunction()
-};
-window.onload = function () {
+    scrollFunction();
+}
 
+window.onload = function () {
     openMenu();
     closeMenu();
 }

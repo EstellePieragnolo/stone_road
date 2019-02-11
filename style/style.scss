@@ -2,14 +2,12 @@ $yellow: #C7D9AF;
 $darkGrey: #2f2c2c;
 $white: #FFF8F6;
 $grey: #E5DAD8;
-
 html,
 body {
     margin: 0;
     border: 0;
     font-family: 'Open Sans Condensed', sans-serif;
-    background-color: $white;
-    // ::-webkit-scrollbar {
+    background-color: $white; // ::-webkit-scrollbar {
     //     display: none;
     // }
     -webkit-overflow-scrolling: touch;
@@ -35,7 +33,6 @@ body {
         -o-transform: translatey(-70px);
         transform: translatey(-70px);
     }
-
     30% {
         opacity: 0;
         -webkit-transform: translatey(-70px);
@@ -43,9 +40,7 @@ body {
         -o-transform: translatey(-70px);
         transform: translatey(-70px);
     }
-
     100% {
-
         -webkit-transform: translatey(0);
         -moz-transform: translatey(0);
         -o-transform: translatey(0);
@@ -56,7 +51,6 @@ body {
 .open {
     position: fixed;
     z-index: 10;
-
     p {
         color: white;
         font-size: 30px;
@@ -68,12 +62,10 @@ body {
 .header {
     overflow: hidden;
     position: relative;
-
     &Container {
         width: 100vw;
         height: 100vh;
         overflow: hidden;
-
         &BgImage {
             width: 100%;
             height: 100%;
@@ -86,7 +78,6 @@ body {
             animation: zoomin 28s linear infinite;
             overflow: hidden;
             transform: scale(1.3);
-
             &Overlay {
                 position: absolute;
                 top: 0;
@@ -97,12 +88,10 @@ body {
                 background-color: rgba(0, 0, 0, 0.4);
             }
         }
-
         &Title {
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            // border: 1px solid $white;
+            justify-content: center; // border: 1px solid $white;
             text-align: center;
             position: absolute;
             top: 0px;
@@ -112,7 +101,6 @@ body {
             padding-top: 15%;
             z-index: 2;
             text-transform: uppercase;
-
             h1 {
                 font-weight: 300;
                 color: $white;
@@ -125,8 +113,6 @@ body {
                 -o-animation: titleEnter 3s linear;
                 animation: titleEnter 3s linear;
             }
-
-
         }
     }
 }
@@ -135,36 +121,28 @@ body {
     padding: 0;
     z-index: 9;
     width: 100vw;
-
     .container {
         max-width: unset;
-
         p {
             color: $white;
         }
     }
-
     &.noSticky {
         position: absolute;
         bottom: 0;
         background-color: rgba(0, 0, 0, 0);
         align-items: center;
         transition: bottom 0.6s ease-in;
-
         .container {
             align-items: center;
             height: 90px;
             position: relative;
             transition: height 0.4s ease-in;
-
             img {
                 width: 80px;
                 height: 80px;
-                transition: height 0.5s ease-in,
-                    width 0.5s ease-in;
-
+                transition: height 0.5s ease-in, width 0.5s ease-in;
             }
-
             &:before {
                 content: '';
                 display: inline-block;
@@ -174,10 +152,8 @@ body {
                 opacity: 1;
                 left: 0;
                 bottom: 50%;
-                transition: bottom 0.4s ease-in,
-                    opacity 0.4s linear;
+                transition: bottom 0.4s ease-in, opacity 0.4s linear;
             }
-
             &:after {
                 content: '';
                 display: inline-block;
@@ -187,13 +163,10 @@ body {
                 opacity: 1;
                 right: 0;
                 bottom: 50%;
-                transition: bottom 0.4s ease-in,
-                    opacity 0.4s linear;
+                transition: bottom 0.4s ease-in, opacity 0.4s linear;
             }
-
         }
     }
-
     &.sticky {
         position: sticky;
         height: 90px;
@@ -202,24 +175,17 @@ body {
         align-items: flex-end;
         margin-top: -89px;
         bottom: 0;
-        transition: position 0.6s ease-in,
-            bottom 0.6s ease-in,
-            background-color 0.3s ease-in;
-
+        transition: position 0.6s ease-in, bottom 0.6s ease-in, background-color 0.3s ease-in;
         .container {
             height: 40px;
             position: absolute;
             bottom: -5px;
             transition: height 0.4s linear;
-
             img {
                 width: 30px;
                 height: 30px;
-                transition:
-                    height 0.4s ease-in,
-                    width 0.4s ease-in;
+                transition: height 0.4s ease-in, width 0.4s ease-in;
             }
-
             &:before {
                 content: '';
                 display: inline-block;
@@ -229,10 +195,8 @@ body {
                 opacity: 0;
                 left: 0;
                 bottom: 0;
-                transition: bottom 0.4s ease-in,
-                    opacity 0.3s linear;
+                transition: bottom 0.4s ease-in, opacity 0.3s linear;
             }
-
             &:after {
                 content: '';
                 display: inline-block;
@@ -242,19 +206,15 @@ body {
                 opacity: 0;
                 right: 0;
                 bottom: 0;
-                transition: bottom 0.4s ease-in,
-                    opacity 0.3s linear;
+                transition: bottom 0.4s ease-in, opacity 0.3s linear;
             }
         }
     }
-
     .container {
         width: 100%;
         display: flex;
         justify-content: center;
-
     }
-
 }
 
 .noVisible {
@@ -265,24 +225,20 @@ body {
     z-index: 100;
     width: 100vw;
     height: 100vh;
-    background-color: $darkGrey;
     position: fixed;
     top: 0;
     left: 0;
-
+    display: flex;
+    justify-content: flex-start;
     .menuContainer {
         color: $white;
     }
 }
 
 .menu {
-    // transition: transform 1s linear;
-    // transform: rotate(-45deg);
-
     &Container {
-
-        // transform: rotate(45deg);
-
+        background-color: $darkGrey;
+        width: 20%;
         &Close {
             display: flex;
             position: relative;
@@ -290,7 +246,6 @@ body {
             height: 40px;
             margin: 9px 55px;
             cursor: pointer;
-
             &:after {
                 content: '';
                 display: flex;
@@ -299,10 +254,8 @@ body {
                 height: 2px;
                 top: 20px;
                 background-color: $white;
-
                 transform: rotate(45deg);
             }
-
             &:before {
                 content: '';
                 display: flex;
@@ -314,7 +267,6 @@ body {
                 transform: rotate(-45deg);
             }
         }
-
         &Items {
             display: flex;
             flex-direction: column;
@@ -322,7 +274,6 @@ body {
             justify-content: center;
             width: 100%;
             height: 100%;
-
             a {
                 text-decoration: none;
                 color: $white;
@@ -332,18 +283,15 @@ body {
     }
 }
 
-
 .creations {
     margin: 0 15px 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     &Description {
         display: flex;
         flex-direction: column;
         margin: 80px 275px 40px;
-
         &Title {
             font-size: 70px;
             text-align: center;
@@ -352,7 +300,6 @@ body {
             position: relative;
             margin: 0 auto;
             z-index: 1;
-
             &:after {
                 content: '';
                 position: absolute;
@@ -365,7 +312,6 @@ body {
                 z-index: -1;
             }
         }
-
         &Text {
             font-size: 20px;
             font-weight: 300;
@@ -375,33 +321,24 @@ body {
             text-align: justify;
             line-height: 1.8;
         }
-    }
-
-    // &Border {
+    } // &Border {
     //     background-color: $yellow;
     //     width: 400px;
     //     display: block;
     // }
-
-
     &Portfolio {
         background-color: $white;
         position: relative;
         margin: 0;
-
         &Container {
             max-width: 1000px;
             margin: 0 auto;
-
             &Item {
-
                 &First {
                     display: flex;
                     flex-direction: row;
                     justify-content: space-around;
                     margin-bottom: 15px;
-
-
                     &Images {
                         flex-direction: column;
                         -webkit-filter: grayscale(0);
@@ -415,23 +352,17 @@ body {
                         width: calc(100% - 90px);
                         position: relative;
                         background-color: $grey;
-
                         img {
                             -webkit-transition: .4s ease-in-out;
                             transition: .4s ease-in-out;
                             width: 100%;
                             transform: scale(0.7);
-
                         }
                     }
-
                     &Small {
                         width: calc(100% / 2);
                         display: flex;
                         flex-direction: column;
-
-
-
                         &Images {
                             flex-direction: column;
                             -webkit-filter: grayscale(0);
@@ -444,35 +375,26 @@ body {
                             margin: 0 15px 0 30px;
                             position: relative;
                             background-color: $grey;
-
                             &:first-child {
                                 margin-bottom: 15px;
                             }
-
                             &:last-child {
                                 margin-top: 15px;
                             }
-
                             img {
                                 -webkit-transition: .4s ease-in-out;
                                 transition: .4s ease-in-out;
                                 width: 100%;
                                 transform: scale(0.7);
-
                             }
-
                         }
-
                     }
-
                 }
-
                 &Second {
                     display: flex;
                     flex-direction: row;
                     flex-wrap: wrap;
                     justify-content: space-around;
-
                     &Images {
                         -webkit-filter: grayscale(0);
                         filter: grayscale(0);
@@ -485,20 +407,13 @@ body {
                         margin: 15px 0;
                         background-color: $grey;
                         position: relative;
-
-
                         img {
                             -webkit-transition: .4s ease-in-out;
                             transition: .4s ease-in-out;
                             width: 100%;
                             transform: scale(0.7);
-
                         }
-
-                    }
-
-
-                    // &Border {
+                    } // &Border {
                     //     position: absolute;
                     //     display: block;
                     //     width: 100%;
@@ -507,7 +422,6 @@ body {
                     //     left: 0;
                     //     background-color: rgba(0, 0, 0, 0);
                     //     transition: margin 0.4s, width 0.4s, height 0.4s, border 0.4s, background-color 0.4s;
-
                     //     &:hover {
                     //         width: 100%;
                     //         height: 100%;
@@ -516,7 +430,6 @@ body {
                     //         top: 0;
                     //         left: 0;
                     //     }
-
                     //     &:hover>figcaption {
                     //         position: absolute;
                     //         display: flex;
@@ -533,32 +446,22 @@ body {
                     //         transform: greyscale(100%);
                     //     }
                     // }
-
                     i[aria-hidden=true] {
                         cursor: default;
                         border: none;
                         width: 250px;
                     }
-
                     &:hover>img {
                         -webkit-filter: grayscale(80%);
                         filter: grayscale(80%);
                     }
-
                     &:hover>img {
                         transform: scale(1.1);
                     }
-
-
-
                     figcaption {
                         display: none;
-
-
                     }
-
                 }
-
                 #aria {
                     margin: 0;
                     padding: 0;
@@ -575,47 +478,38 @@ body {
 .presentation {
     background-color: $white;
     padding: 80px 0;
-
     &Container {
         display: flex;
         flex-direction: row;
         justify-content: center;
-
-
         &Picture {
             display: flex;
             flex-direction: column;
             justify-content: center;
             width: 25%;
-
             span {
                 border-radius: 50%;
                 width: 150px;
                 height: 150px;
             }
-
             &Orianne {
                 background-image: url("../src/us/orianne.jpg");
                 background-size: cover;
             }
-
             &Simon {
                 // background-image: url("http://lorempicsum.com/up/350/200/1");
                 background-size: cover;
             }
-
             &Louis {
                 // background-image: url("http://lorempicsum.com/up/255/200/5");
                 background-size: cover;
             }
         }
-
         &Paragraph {
             margin: 0 150px 80px;
             display: flex;
             flex-direction: column;
             justify-content: center;
-
             &Title {
                 font-size: 70px;
                 text-align: center;
@@ -624,7 +518,6 @@ body {
                 position: relative;
                 margin: 0 auto;
                 z-index: 1;
-
                 &:after {
                     content: '';
                     position: absolute;
@@ -637,7 +530,6 @@ body {
                     z-index: -1;
                 }
             }
-
             &Text {
                 font-size: 20px;
                 font-weight: 300;
@@ -655,43 +547,34 @@ body {
     &Container {
         display: flex;
         flex-direction: row;
-
         &Pictures {
             img {
                 height: 200px;
                 filter: grayscale(100%);
                 -webkit-filter: grayscale(100%);
             }
-
             &:hover {
                 z-index: 1000;
                 transform: scale(1.5);
                 -webkit-transition: .2s ease;
                 transition: .2s ease;
-
             }
-
             &:hover>img {
                 filter: grayscale(0%);
-                -webkit-filter: grayscale(0%);
-                // padding-bottom: 50px;
+                -webkit-filter: grayscale(0%); // padding-bottom: 50px;
                 // margin-left: 30px;
                 // pointer-events: none;
-
             }
         }
-
     }
 }
 
 // .slider {
 //     background-color: $darkGrey;
 //     height: 750px;
-
 //     &Header {
 //         width: 80%;
 //         margin: 80px auto 0;
-
 //         &Title {
 //             font-size: 50px;
 //             text-align: center;
@@ -699,7 +582,6 @@ body {
 //             margin: 0;
 //             overflow: hidden;
 //         }
-
 //         &Text {
 //             font-size: 16px;
 //             line-height: 1.5;
@@ -709,27 +591,21 @@ body {
 //             font-weight: 400;
 //         }
 //     }
-
 //     &Container {
 //         display: flex;
 //         align-items: center;
 //         margin: 0 0 20px 0;
-
 //         &Inner {
 //             height: 500px;
-
 //             &Item {
 //                 padding: 0 130px;
-
 //                 &Block {
 //                     display: flex;
 //                     flex-direction: row;
 //                     margin: auto;
-
 //                     &Img {
 //                         width: 100%;
 //                         height: 100%;
-
 //                         img {
 //                             position: absolute;
 //                             left: 50%;
@@ -743,7 +619,6 @@ body {
 //                             box-shadow: 0px 0px 50px 3px rgba(0, 0, 0, 0.69);
 //                         }
 //                     }
-
 //                     // &Info {
 //                     //     width: 50%;
 //                     //     margin: 30px 0 30px 60px;
@@ -756,7 +631,6 @@ body {
 //             }
 //         }
 //     }
-
 //     &Info {
 //         margin: 40px 0;
 //         display: flex;
@@ -764,13 +638,11 @@ body {
 //         flex-direction: column;
 //         color: #f2f0f0;
 //         padding: 0 40px;
-
 //         &Title {
 //             font-size: 35px;
 //             text-align: center;
 //             margin: 0;
 //         }
-
 //         &Text {
 //             font-size: 16px;
 //             line-height: 1.5;
@@ -779,18 +651,15 @@ body {
 //         }
 //     }
 // }
-
 .contact {
     &Container {
         color: $darkGrey;
         margin: 80px 0;
-
         &Title {
             font-size: 50px;
             text-align: center;
             margin: 0;
         }
-
         &Text {
             font-size: 16px;
             line-height: 1.5;
@@ -809,7 +678,6 @@ body {
     margin: 0;
     display: flex;
     flex-direction: row;
-
     &Close {
         margin: 20px 0 0;
         width: 30px;
@@ -820,12 +688,10 @@ body {
         top: 0;
         right: 10px;
         cursor: pointer;
-
         &:hover {
             color: $darkGrey;
         }
     }
-
     &Picture {
         display: flex;
         justify-content: center;
@@ -833,15 +699,12 @@ body {
         width: 100%;
         margin: 80px;
         position: relative;
-
         &Item {
             margin: 0 auto;
             width: 100%;
-
             img {
                 max-width: 70%;
             }
-
             &Border {
                 position: absolute;
                 display: block;
@@ -855,18 +718,15 @@ body {
             }
         }
     }
-
     &Infos {
         margin: 30px;
         width: 50%;
-
         &Title {
             font-size: 50px;
             text-align: center;
             margin: 0;
             color: #f2f0f0;
         }
-
         &Text {
             font-size: 16px;
             line-height: 1.5;
@@ -879,19 +739,16 @@ body {
 
 .contact {
     background-color: $white;
-
     &Container {
         display: flex;
         justify-content: center;
         flex-direction: column;
-
         &Title {
             font-size: 50px;
             text-align: center;
             margin: 0;
             color: $darkGrey;
         }
-
         &Text {
             margin: 80px 0 0 !important;
             font-size: 16px;
@@ -899,19 +756,16 @@ body {
             text-align: center;
             color: $darkGrey;
             margin: 0 auto;
-
             span {
                 font-weight: bold;
             }
         }
-
         a {
             padding-top: 40px !important;
             text-align: center;
             color: $darkGrey;
             text-decoration: none;
             font-weight: bolder;
-
             &:hover {
                 color: #797777;
             }
@@ -926,11 +780,9 @@ body {
                 &Orianne {
                     margin: -5% 0 0 17%;
                 }
-
                 &Simon {
                     margin: 5% 0 -5% 40%;
                 }
-
                 &Louis {
                     margin: -33% 0 0 23%;
                 }
@@ -946,11 +798,9 @@ body {
                 &Orianne {
                     margin: 40px auto;
                 }
-
                 &Simon {
                     margin: 40px auto;
                 }
-
                 &Louis {
                     margin: 40px auto 100px;
                 }
@@ -963,26 +813,21 @@ body {
     .presentation {
         &Container {
             flex-direction: column;
-
             &Picture {
                 flex-direction: row;
                 order: 2;
                 width: 100%;
                 padding: 0 10px;
-
                 &Orianne {
                     margin: 10px auto;
                 }
-
                 &Simon {
                     margin: 10px auto;
                 }
-
                 &Louis {
                     margin: 10px auto;
                 }
             }
-
             &Paragraph {
                 order: 1;
                 width: 100%;
@@ -990,28 +835,23 @@ body {
             }
         }
     }
-
     .slider {
         display: flex;
         flex-direction: column;
         height: unset;
-
         &Header {
             height: unset;
             width: 100%;
             padding: 0 10px;
             margin: 80px 0 20px;
         }
-
         &Container {
             width: 100%;
             margin: 0 0 30px 0;
-
             &Inner {
                 height: 400px;
             }
         }
-
         &Info {
             display: flex;
             justify-content: center;
@@ -1020,13 +860,11 @@ body {
             color: #f2f0f0;
             padding: 50px 20px;
             background-color: $darkGrey;
-
             &Title {
                 font-size: 50px;
                 text-align: center;
                 margin: 0;
             }
-
             &Text {
                 font-size: 16px;
                 line-height: 1.5;
@@ -1046,9 +884,7 @@ body {
             }
         }
     }
-
     .Creations {
-
         // &Description {
         //     margin: 80px 0;
         //     width: 100%;
@@ -1059,20 +895,16 @@ body {
                 flex-direction: column;
                 width: 100%;
                 margin: 0 auto;
-
                 &Item {
                     flex-direction: column;
                     justify-content: center;
-
                     &Images {
                         margin: 0 auto 40px;
                         width: 100%;
                         max-width: 450px;
-
                         &:hover>img {
                             transform: scale(1);
                         }
-
                         &:hover {
                             -webkit-filter: grayscale(0);
                             filter: grayscale(0);
@@ -1082,7 +914,6 @@ body {
             }
         }
     }
-
     .modalContainer {
         width: 100vw;
         height: 100vh;
@@ -1090,7 +921,6 @@ body {
         margin: 0;
         display: flex;
         flex-direction: column-reverse;
-
         &Close {
             padding: 20px;
             width: 30px;
@@ -1102,7 +932,6 @@ body {
             right: 10px;
             overflow: hidden;
         }
-
         &Picture {
             display: flex;
             justify-content: center;
@@ -1110,20 +939,17 @@ body {
             width: 100%;
             height: 100%;
         }
-
         &Infos {
             padding: 20px 10px;
             width: 100%;
             height: 50%;
             margin: 0 0 10px 0;
-
             &Title {
                 font-size: 50px;
                 text-align: center;
                 margin: 0;
                 color: #f2f0f0;
             }
-
             &Text {
                 font-size: 16px;
                 line-height: 1.5;
@@ -1141,17 +967,14 @@ body {
         -webkit-transform: scale(1.1);
         transform: scale(1.1);
     }
-
     47% {
         -webkit-transform: scale(1.3);
         transform: scale(1.3);
     }
-
     50% {
         -webkit-transform: scale(1.3);
         transform: scale(1.3);
     }
-
     100% {
         -webkit-transform: scale(1.1);
         transform: scale(1.1);
