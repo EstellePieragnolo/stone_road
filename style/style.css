@@ -42,15 +42,15 @@
   position: absolute;
   z-index: 100;
   height: 100vh;
-  width: 100vw; }
+  width: 30vw; }
   .menuContainer {
     background-color: #2f2c2c;
-    width: 40%; }
+    width: 100%;
+    height: 100%; }
     .menuContainerClose {
       position: relative;
       width: 40px;
       height: 40px;
-      margin: 9px 55px;
       cursor: pointer; }
       .menuContainerClose:after {
         content: '';
@@ -58,7 +58,8 @@
         position: absolute;
         width: 30px;
         height: 2px;
-        top: 20px;
+        top: 30px;
+        left: 40px;
         background-color: white;
         transform: rotate(45deg); }
       .menuContainerClose:before {
@@ -67,7 +68,8 @@
         position: absolute;
         width: 30px;
         height: 2px;
-        top: 20px;
+        left: 40px;
+        top: 30px;
         background-color: white;
         transform: rotate(-45deg); }
     .menuContainerItems {
@@ -99,6 +101,9 @@ body {
   font-family: 'Open Sans Condensed', sans-serif;
   background-color: white;
   -webkit-overflow-scrolling: touch; }
+
+html {
+  scroll-behavior: smooth; }
 
 body {
   overflow-x: hidden; }
