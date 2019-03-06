@@ -6,6 +6,7 @@ window.onscroll = function () {
 window.onload = function () {
     openMenu();
     closeMenu();
+    getInnerHeight();
 
 }
 
