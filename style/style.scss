@@ -1,7 +1,6 @@
-$yellow: #C7D9AF;
-$darkGrey: #2f2c2c;
-$white: #FFF8F6;
-$grey: #E5DAD8;
+@import "animations.scss";
+@import "menu.scss";
+@import "variables.scss";
 html,
 body {
     margin: 0;
@@ -25,38 +24,8 @@ body {
     box-sizing: border-box;
 }
 
-@-webkit-keyframes titleEnter {
-    0% {
-        opacity: 0;
-        -webkit-transform: translatey(-70px);
-        -moz-transform: translatey(-70px);
-        -o-transform: translatey(-70px);
-        transform: translatey(-70px);
-    }
-    30% {
-        opacity: 0;
-        -webkit-transform: translatey(-70px);
-        -moz-transform: translatey(-70px);
-        -o-transform: translatey(-70px);
-        transform: translatey(-70px);
-    }
-    100% {
-        -webkit-transform: translatey(0);
-        -moz-transform: translatey(0);
-        -o-transform: translatey(0);
-        transform: translatey(0);
-    }
-}
-
-.open {
-    position: fixed;
-    z-index: 10;
-    p {
-        color: white;
-        font-size: 30px;
-        margin: 0 40px 0;
-        cursor: pointer;
-    }
+.visible>.header {
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .header {
@@ -214,72 +183,6 @@ body {
         width: 100%;
         display: flex;
         justify-content: center;
-    }
-}
-
-.noVisible {
-    display: none;
-}
-
-.visible {
-    z-index: 100;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: flex-start;
-    .menuContainer {
-        color: $white;
-    }
-}
-
-.menu {
-    &Container {
-        background-color: $darkGrey;
-        width: 20%;
-        &Close {
-            display: flex;
-            position: relative;
-            width: 40px;
-            height: 40px;
-            margin: 9px 55px;
-            cursor: pointer;
-            &:after {
-                content: '';
-                display: flex;
-                position: absolute;
-                width: 30px;
-                height: 2px;
-                top: 20px;
-                background-color: $white;
-                transform: rotate(45deg);
-            }
-            &:before {
-                content: '';
-                display: flex;
-                position: absolute;
-                width: 30px;
-                height: 2px;
-                top: 20px;
-                background-color: $white;
-                transform: rotate(-45deg);
-            }
-        }
-        &Items {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 100%;
-            a {
-                text-decoration: none;
-                color: $white;
-                font-size: 60px;
-            }
-        }
     }
 }
 
@@ -958,25 +861,5 @@ body {
                 color: #f2f0f0;
             }
         }
-    }
-}
-
-// Animations
-@-webkit-keyframes zoomin {
-    0% {
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
-    }
-    47% {
-        -webkit-transform: scale(1.3);
-        transform: scale(1.3);
-    }
-    50% {
-        -webkit-transform: scale(1.3);
-        transform: scale(1.3);
-    }
-    100% {
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
     }
 }

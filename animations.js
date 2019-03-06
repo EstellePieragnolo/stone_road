@@ -1,10 +1,19 @@
 window.onscroll = function () {
     scrollFunction();
+    getInnerHeight();
 }
 
 window.onload = function () {
     openMenu();
     closeMenu();
+
+}
+
+function getInnerHeight() {
+    const scroll = window.scrollY;
+    const div = document.getElementById('menu');
+    console.log(div.style.top = scroll)
+    return div.style.top = scroll;
 }
 
 function scrollFunction() {
