@@ -30,13 +30,32 @@
     -webkit-transform: scale(1.1);
     transform: scale(1.1); } }
 .open {
-  position: fixed;
+  position: relative;
   z-index: 10; }
-  .open p {
-    color: white;
-    font-size: 30px;
-    margin: 0 40px 0;
-    cursor: pointer; }
+  .open span {
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 40px; }
+    .open span:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 20px;
+      border-bottom: 2px solid white;
+      border-top: 2px solid white; }
+    .open span:after {
+      content: '';
+      position: absolute;
+      top: 11px;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background-color: white; }
 
 .menu {
   position: absolute;
@@ -46,20 +65,23 @@
   .menuContainer {
     background-color: #2f2c2c;
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    position: relative; }
     .menuContainerClose {
-      position: relative;
       width: 40px;
       height: 40px;
-      cursor: pointer; }
+      top: 20px;
+      left: 40px;
+      cursor: pointer;
+      position: absolute; }
       .menuContainerClose:after {
         content: '';
         display: flex;
         position: absolute;
         width: 30px;
         height: 2px;
-        top: 30px;
-        left: 40px;
+        left: 5px;
+        top: 20px;
         background-color: white;
         transform: rotate(45deg); }
       .menuContainerClose:before {
@@ -68,8 +90,8 @@
         position: absolute;
         width: 30px;
         height: 2px;
-        left: 40px;
-        top: 30px;
+        left: 5px;
+        top: 20px;
         background-color: white;
         transform: rotate(-45deg); }
     .menuContainerItems {
