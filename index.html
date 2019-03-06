@@ -15,6 +15,7 @@
 
 <body id="body">
 
+
     <header class="open">
         <p id="toggle" onclick="openMenu()">Menu</p>
     </header>
@@ -33,19 +34,20 @@
             </div>
         </div>
     </div>
-
+    <div class="noOverlay" id="overlay"></div>
     <div class="navbar noSticky" id="nav">
         <div class="container">
             <img src="src/logo.png" alt="Logo">
         </div>
     </div>
     <div class="menu noVisible" id="menu">
+
         <div class="menuContainer">
             <span class="menuContainerClose" onclick="closeMenu()"></span>
             <div class="menuContainerItems">
-                <a href="#creations">MENU 1</a>
-                <a href="#presentation">MENU 2</a>
-                <a href="#slider">MENU 3</a>
+                <a href="#creations" onclick="closeMenu()">MENU 1</a>
+                <a href="#presentation" onclick="closeMenu()">MENU 2</a>
+                <a href="#slider" onclick="closeMenu()">MENU 3</a>
             </div>
         </div>
     </div>

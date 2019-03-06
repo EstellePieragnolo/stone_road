@@ -12,7 +12,6 @@ window.onload = function () {
 function getInnerHeight() {
     const scroll = window.scrollY;
     const div = document.getElementById('menu');
-    console.log(div.style.top = scroll)
     return div.style.top = scroll;
 }
 
@@ -34,18 +33,27 @@ function scrollFunction() {
 
 function openMenu() {
     let menu = document.getElementById('menu');
+    const overlay = document.getElementById('overlay');
+    const scroll = window.scrollY;
     if (menu.classList.contains('noVisible')) {
         menu.classList.add('visible');
         menu.classList.remove('noVisible');
         body.classList.add('noOverflow');
+        overlay.classList.add('overlay');
+        overlay.classList.remove('noOverlay');
+        return overlay.style.top = scroll;
     }
 }
 
 function closeMenu() {
     let menu = document.getElementById('menu');
+    const overlay = document.getElementById('overlay');
+    const scroll = window.scrollY;
     if (menu.classList.contains('visible')) {
         menu.classList.remove('visible');
         menu.classList.add('noVisible');
         body.classList.remove('noOverflow');
+        overlay.classList.remove('overlay');
+        overlay.classList.add('noOverlay');
     }
 }
