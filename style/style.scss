@@ -15,11 +15,9 @@ body {
 html {
     scroll-behavior: smooth;
 }
-
 body {
     overflow-x: hidden;
 }
-
 .noOverflow {
     overflow: hidden;
 }
@@ -161,7 +159,9 @@ body {
         align-items: flex-end;
         margin-top: -89px;
         bottom: 0;
-        transition: position 0.6s ease-in, bottom 0.6s ease-in, background-color 0.3s ease-in;
+        transition: position 0.6s ease-in,
+    bottom 0.6s ease-in,
+    background-color 0.3s ease-in;
         .container {
             height: 40px;
             position: absolute;
