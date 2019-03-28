@@ -1,4 +1,4 @@
-<!DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -7,71 +7,138 @@
     <meta name="google-site-verification" content="WqgTNLx_JSMGk_1EoVMEC8JhkOvxZOhp_VHP780TnsY" />
     <title>La Route de la Pierre</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous"> -->
     <link rel="stylesheet" type="text/css" media="screen" href="style/style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
+    <script type="text/javascript" src="animations.js"></script>
 </head>
 
-<body>
+<body id="body">
+
+
+    <header class="open">
+        <span id="toggle" onclick="openMenu()"></span>
+    </header>
+
     <div class="header">
         <div class="headerContainer">
             <div class="headerContainerBgImage">
-                <div class="headerContainerBgImageOverlay"></div>
-            </div>
 
-            <h1 class="headerContainerTitle">La route de la pierre</h1>
+                <div class="headerContainerBgImageOverlay">
+                </div>
+
+            </div>
+            <div class="headerContainerTitle">
+                <h1>La route de la pierre</h1>
+
+            </div>
+        </div>
+    </div>
+    <div class="noOverlay" id="overlay"></div>
+    <div class="navbar noSticky" id="nav">
+        <div class="container">
+            <img src="src/logo.png" alt="Logo">
+        </div>
+    </div>
+    <div class="menu noVisible" id="menu">
+
+        <div class="menuContainer">
+            <span class="menuContainerClose" onclick="closeMenu()"></span>
+            <div class="menuContainerItems">
+                <a href="#inspirations" onclick="closeMenu()">Nos inspirations</a>
+                <a href="#creations" onclick="closeMenu()">Nos créations</a>
+                <a href="#presentation" onclick="closeMenu()">Qui sommes-nous ?</a>
+                <a href="#contact" onclick="closeMenu()">Contact</a>
+            </div>
         </div>
     </div>
 
-    <div class="creations">
+
+    <div class="creations" id="creations">
+
         <div class="creationsDescription">
             <h2 class="creationsDescriptionTitle">
                 Nos créations
             </h2>
             <p class="creationsDescriptionText">
-                Chaque jours lorsque nous travaillons la pierre, il nous est possible de contempler les milles paysages
-                que nous offre les veines, les couleurs, le grain, la vie de ce matériau.
-                Ce sont ces instants où perdu dans notre imagination, que nous souhaitons partager.
-                En donnant à la pierre une forme utile au quotidien, nous avons souhaité ouvrir pour tous la porte de
-                cet univers onirique et pas si froid.
+                Chaque jours lorsque nous travaillons la pierre, il nous est possible de contempler les milles paysages que nous offre les
+                veines, les couleurs, le grain, la vie de ce matériau. Ce sont ces instants où perdu dans notre imagination,
+                que nous souhaitons partager. En donnant à la pierre une forme utile au quotidien, nous avons souhaité ouvrir
+                pour tous la porte de cet univers onirique et pas si froid.
                 <br />
-                <br />
-                Alors …
-                Entrez dans le Taj-Mahal en dégustant votre fromage sur un plateau fait du même marbre que son sol !
-                Venez dans un palais Vénitien en empoignant un couteau tailler dans du Carrare !
-                Partez déguster votre bière à Bruxelles sur un bloc en pierre du Hainaut !
+                <br /> Alors … Entrez dans le Taj-Mahal en dégustant votre fromage sur un plateau fait du même marbre que son sol
+                ! Venez dans un palais Vénitien en empoignant un couteau tailler dans du Carrare ! Partez déguster votre
+                bière à Bruxelles sur un bloc en pierre du Hainaut !
 
 
             </p>
         </div>
+
+
+
         <div class="creationsPortfolio">
             <div class="creationsPortfolioContainer">
                 <div class="creationsPortfolioContainerItem">
-                    <div class="creationsPortfolioContainerItemImages" data-toggle="modal" data-target="#planche">
-                        <img src="src/creations/planche.JPG" alt="">
+                    <div class="creationsPortfolioContainerItemFirst">
+                        <figure class="creationsPortfolioContainerItemFirstImages" data-toggle="modal" data-target="#planche">
+                            <img src="src/creations/couteau.png" alt="">
+                            <span class="creationsPortfolioContainerItemImagesBorder">
+                                <figcaption>Planche à découper</figcaption>
+                            </span>
+                        </figure>
+                        <div class="creationsPortfolioContainerItemFirstSmall">
+                            <figure class="creationsPortfolioContainerItemFirstSmallImages" data-toggle="modal" data-target="#coupelle_white">
+                                <img src="src/creations/plat.png" alt="">
+                                <span class="creationsPortfolioContainerItemImagesBorder">
+                                    <figcaption>Coupelle</figcaption>
+                                </span>
+                            </figure>
+                            <figure class="creationsPortfolioContainerItemFirstSmallImages" data-toggle="modal" data-target="#coupelle_black">
+                                <img src="src/creations/plat_black.png" alt="">
+                                <span class="creationsPortfolioContainerItemImagesBorder">
+                                    <figcaption>Coupelle noire</figcaption>
+                                </span>
+                            </figure>
+                        </div>
                     </div>
-                    <div class="creationsPortfolioContainerItemImages" data-toggle="modal" data-target="#coupelle_white">
-                        <img src="src/creations/coupelle_white.JPG" alt="">
-                    </div>
-                    <div class="creationsPortfolioContainerItemImages" data-toggle="modal" data-target="#coupelle_black">
-                        <img src="src/creations/coupelle_black.JPG" alt="">
-                    </div>
-
-                    <div class="creationsPortfolioContainerItemImages" data-toggle="modal" data-target="#mortier">
-                        <img src="src/creations/mortier.JPG" alt="">
-                    </div>
-                    <div class="creationsPortfolioContainerItemImages" data-toggle="modal" data-target="#plat">
-                        <img src="src/creations/plat.jpg" alt="">
-                    </div>
-                    <div class="creationsPortfolioContainerItemImages" data-toggle="modal" data-target="#couteau_noir">
-                        <img src="src/creations/couteau_noir.jpg" alt="">
-                    </div>
-                    <div class="creationsPortfolioContainerItemImages" data-toggle="modal" data-target="#couteau_rg">
-                        <img src="src/creations/couteau_rg.jpg" alt="">
-                    </div>
-                    <div class="creationsPortfolioContainerItemImages" data-toggle="modal" data-target="#couteau_bf">
-                        <img src="src/creations/couteau_bf.jpg" alt="">
+                    <div class="creationsPortfolioContainerItemSecond">
+                        <figure class="creationsPortfolioContainerItemSecondImages" data-toggle="modal" data-target="#mortier">
+                            <img src="src/creations/couteau_red.png" alt="">
+                            <span class="creationsPortfolioContainerItemImagesBorder">
+                                <figcaption>Mortier et pilon</figcaption>
+                            </span>
+                        </figure>
+                        <figure class="creationsPortfolioContainerItemSecondImages" data-toggle="modal" data-target="#plat">
+                            <img src="src/creations/plat_small.png" alt="">
+                            <span class="creationsPortfolioContainerItemImagesBorder">
+                                <figcaption>Plat</figcaption>
+                            </span>
+                        </figure>
+                        <figure class="creationsPortfolioContainerItemSecondImages" data-toggle="modal" data-target="#couteau_noir">
+                            <img src="src/creations/porteSavon.png" alt="">
+                            <span class="creationsPortfolioContainerItemImagesBorder">
+                                <figcaption>Couteau noir</figcaption>
+                            </span>
+                        </figure>
+                        <figure class="creationsPortfolioContainerItemSecondImages" data-toggle="modal" data-target="#couteau_rg">
+                            <img src="src/creations/plat_white.png" alt="">
+                            <span class="creationsPortfolioContainerItemImagesBorder">
+                                <figcaption>Couteau rouge</figcaption>
+                            </span>
+                        </figure>
+                        <figure class="creationsPortfolioContainerItemSecondImages" data-toggle="modal" data-target="#couteau_bf">
+                            <img src="src/creations/couteau_black.png" alt="">
+                            <span class="creationsPortfolioContainerItemImagesBorder">
+                                <figcaption>Couteau beige</figcaption>
+                            </span>
+                        </figure>
+                        <figure class="creationsPortfolioContainerItemSecondImages" data-toggle="modal" data-target="#couteau_bf">
+                            <img src="src/creations/plat_small.png" alt="">
+                            <span class="creationsPortfolioContainerItemImagesBorder">
+                                <figcaption>Couteau beige</figcaption>
+                            </span>
+                        </figure>
                     </div>
 
                     <!-- hack to ensure items are always at left  -->
@@ -88,13 +155,11 @@
                     <div class="creationsPortfolioContainerItemImages" id="aria">
                         <i aria-hidden="true"></i>
                     </div>
-
-
                 </div>
             </div>
         </div>
     </div>
-    <div class="presentation">
+    <div class="presentation" id="presentation">
         <div class="presentationContainer">
             <div class="presentationContainerPicture">
                 <span class="presentationContainerPictureOrianne"></span>
@@ -108,36 +173,27 @@
 
                 <p class="presentationContainerParagraphText">
 
-                    La Route de la Pierre est une collaboration entre Orianne P. et Louis D. , issue chacun de
-                    formation et de parcours différents.
+                    La Route de la Pierre est une collaboration entre Orianne P. et Louis D. , issue chacun de formation et de parcours différents.
                     <br />
+                    <br /> Orianne, après 2 ans d'études à l'École Supérieur d'Architecture de Paris Val de Seine, s'est orientée
+                    vers la taille de pierre dans le but de se rapprocher plus concrètement de la construction. Après des
+                    expériences dans les monuments historiques, chez des artisans et en Chine, elle sort major de la promotion
+                    2018 du Brevet Professionnel Monument Historique de l'école Saint Lambert à Paris . Orianne mène maintenant
+                    différents projets au sein d'entreprise et pour son compte.
                     <br />
-                    Orianne, après 2 ans d'études à l'École Supérieur d'Architecture de Paris Val de Seine, s'est
-                    orientée vers la taille de pierre dans le but de se rapprocher plus concrètement de la
-                    construction. Après des expériences dans les monuments historiques, chez des artisans et en Chine,
-                    elle sort major de la promotion 2018 du Brevet Professionnel Monument Historique de l'école Saint
-                    Lambert à Paris .
-                    Orianne mène maintenant différents projets au sein d'entreprise et pour son compte.
+                    <br /> Louis désireux de concret, après un Bac ES, s'est orienté vers la taille de pierre. Après avoir passé
+                    son CAP en 2010, il a appris son métier sur le tas en France: Basilique de Saint Denis, Sainte Chapelle
+                    de Vincennes, Automobile Club de France -Paris, place de la concorde- Paris, Tours, Laon, Lille, Arras,
+                    Fontainebleau). Son attirance pour le matériaux pierre et sa curiosité lui ont également permis de pratiquer
+                    son métier dans différents pays tel que l'Angleterre, Chypre, Israël et l'Inde.
                     <br />
+                    <br /> Après 7 ans de pratique en chantier et à l'atelier, il a complété son expérience de terrain par un DUT
+                    en Génie Civil réalisé à l'IUT de Béthune, Lui permettant une meilleure analyse et connaissance de la
+                    construction. Louis a créé son entreprise de taille de pierre en janvier 2018.
                     <br />
-                    Louis désireux de concret, après un Bac ES, s'est orienté vers la taille de pierre. Après avoir
-                    passé son CAP en 2010, il a appris son métier sur le tas en France: Basilique de Saint Denis,
-                    Sainte Chapelle de Vincennes, Automobile Club de France -Paris, place de la concorde- Paris, Tours,
-                    Laon, Lille, Arras, Fontainebleau). Son attirance pour le matériaux pierre et sa curiosité lui ont
-                    également permis de pratiquer son métier dans différents pays tel que l'Angleterre, Chypre, Israël
-                    et l'Inde.
-                    <br />
-                    <br />
-                    Après 7 ans de pratique en chantier et à l'atelier, il a complété son expérience de terrain par un
-                    DUT en Génie Civil réalisé à l'IUT de Béthune, Lui permettant une meilleure analyse et connaissance
-                    de la construction.
-                    Louis a créé son entreprise de taille de pierre en janvier 2018.
-                    <br />
-                    <br />
-                    Nous collaborons également avec Simon, designer de l'Institut Supérieur de Design de Valenciennes
-                    pour la conception de projet unique et usuel d'intérieur. Estelle développeuse web pour la
-                    réalisation de notre site internet. Et Volume Ouvert situé dans Lille ou nous avons réalisé nos
-                    créations.
+                    <br /> Nous collaborons également avec Simon, designer de l'Institut Supérieur de Design de Valenciennes pour
+                    la conception de projet unique et usuel d'intérieur. Estelle développeuse web pour la réalisation de
+                    notre site internet. Et Volume Ouvert situé dans Lille ou nous avons réalisé nos créations.
 
                 </p>
 
@@ -147,174 +203,42 @@
             </div>
         </div>
     </div>
-    <div class="slider">
-        <div class="sliderHeader">
-            <h2 class="sliderHeaderTitle">Nos autres activités</h2>
-            <p class="sliderHeaderText">
-                Voici ici quelques unes de nos réalisations pour vous illustrer notre métier de tailleur de pierre.
-                Bonne découverte.
-            </p>
-        </div>
-        <div id="carouselExampleControls" class="carousel slide sliderContainer" data-ride="" interval="50000000000">
-            <div class="carousel-inner sliderContainerInner">
-                <div class="carousel-item active sliderContainerInnerItem">
-                    <div class="sliderContainerInnerItemBlock">
-                        <div class="sliderContainerInnerItemBlockImg">
-                            <img class="d-block w-100" src="src/other/1.JPG" alt="First slide">
-                        </div>
-                        <!-- <div class="sliderContainerInnerItemBlockInfo">
-                            <h4 class="sliderInfoTitle">
-                               
-                            </h4>
-                            <p class="sliderInfoText">
-                               
-                            </p>
-                        </div> -->
-                    </div>
-                </div>
-                <div class="carousel-item sliderContainerInnerItem">
-                    <div class="sliderContainerInnerItemBlock">
-                        <div class="sliderContainerInnerItemBlockImg">
-                            <img class="d-block w-100" src="src/other/2.JPG" alt="Second slide">
-                        </div>
-                    </div>
-                </div>
 
-                <div class="carousel-item sliderContainerInnerItem">
-                    <div class="sliderContainerInnerItemBlock">
-                        <div class="sliderContainerInnerItemBlockImg">
-                            <img class="d-block w-100" src="src/other/3.jpg" alt="Third slide">
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="carousel-item sliderContainerInnerItem">
-                    <div class="sliderContainerInnerItemBlock">
-                        <div class="sliderContainerInnerItemBlockImg">
-                            <img class="d-block w-100" src="src/other/4.jpg" alt="Third slide">
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="carousel-item sliderContainerInnerItem">
-                    <div class="sliderContainerInnerItemBlock">
-                        <div class="sliderContainerInnerItemBlockImg">
-                            <img class="d-block w-100" src="src/other/5.jpg" alt="Third slide">
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="carousel-item sliderContainerInnerItem">
-                    <div class="sliderContainerInnerItemBlock">
-                        <div class="sliderContainerInnerItemBlockImg">
-                            <img class="d-block w-100" src="src/other/6.jpg" alt="Third slide">
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="carousel-item sliderContainerInnerItem">
-                    <div class="sliderContainerInnerItemBlock">
-                        <div class="sliderContainerInnerItemBlockImg">
-                            <img class="d-block w-100" src="src/other/7.jpg" alt="Third slide">
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="carousel-item sliderContainerInnerItem">
-                    <div class="sliderContainerInnerItemBlock">
-                        <div class="sliderContainerInnerItemBlockImg">
-                            <img class="d-block w-100" src="src/other/8.jpg" alt="Third slide">
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="carousel-item sliderContainerInnerItem">
-                    <div class="sliderContainerInnerItemBlock">
-                        <div class="sliderContainerInnerItemBlockImg">
-                            <img class="d-block w-100" src="src/other/9.jpg" alt="Third slide">
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel-item sliderContainerInnerItem">
-                    <div class="sliderContainerInnerItemBlock">
-                        <div class="sliderContainerInnerItemBlockImg">
-                            <img class="d-block w-100" src="src/other/10.jpg" alt="Third slide">
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="carousel-item sliderContainerInnerItem">
-                    <div class="sliderContainerInnerItemBlock">
-                        <div class="sliderContainerInnerItemBlockImg">
-                            <img class="d-block w-100" src="src/other/11.jpg" alt="Third slide">
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="carousel-item sliderContainerInnerItem">
-                    <div class="sliderContainerInnerItemBlock">
-                        <div class="sliderContainerInnerItemBlockImg">
-                            <img class="d-block w-100" src="src/other/12.jpg" alt="Third slide">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="carousel-item sliderContainerInnerItem">
-                    <div class="sliderContainerInnerItemBlock">
-                        <div class="sliderContainerInnerItemBlockImg">
-                            <img class="d-block w-100" src="src/other/13.jpg" alt="Third slide">
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="carousel-item sliderContainerInnerItem">
-                    <div class="sliderContainerInnerItemBlock">
-                        <div class="sliderContainerInnerItemBlockImg">
-                            <img class="d-block w-100" src="src/other/14.jpg" alt="Third slide">
-                        </div>
-                    </div>
-                </div>
-
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+    <div class="slider" id="slider">
+        <div class="sliderContainer">
+            <div class="sliderContainerPictures" style="width: 150px;">
+                <img src="src/other/1.JPG" alt="First slide">
+            </div>
+            <div class="sliderContainerPictures" style="width: 266.66px">
+                <img src="src/other/2.JPG" alt="Second slide">
+            </div>
+            <div class="sliderContainerPictures" style="width: 150px;">
+                <img src="src/other/3.jpg" alt="Third slide">
+            </div>
+            <div class="sliderContainerPictures" style="width: 266.66px">
+                <img src="src/other/4.jpg" alt="Third slide">
             </div>
         </div>
     </div>
-    </div>
-
-
-    </div>
-    <div class="contact">
+    <div class="contact" id="contact">
         <div class="contactContainer">
             <h2 class="contactContainerTitle">Contact </h2>
             <p class="contactContainerText">
-                Pour toutes vos demandes concernant , nos prestations et créations sur mesure adressez vous pouvez
-                adresser vos demandes :<br />
-                <br />laroutedelapierre@gmail.com <br />
+                Pour toutes vos demandes concernant nos prestations et créations sur mesure vous pouvez adresser vos demandes à :
                 <br />
-                La Route de la Pierre<br />
-                11 rue D’Avesnes<br />
-                59000 LILLE<br />
+                <br />laroutedelapierre@gmail.com
                 <br />
-                <span>Téléphone :</span><br /><br />
-                0672455965 <br />ou <br />0647957420<br />
+                <br /> La Route de la Pierre
+                <br /> 11 rue D’Avesnes
+                <br /> 59000 LILLE
+                <br />
+                <br />
+                <span>Téléphone :</span>
+                <br />
+                <br /> 0672455965
+                <br />ou
+                <br />0647957420
+                <br />
 
             </p>
             <a href="http://www.volumeouvert.com/">- Volume Ouvert -</a>
@@ -322,179 +246,33 @@
         </div>
     </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="planche" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modalContainer" role="document">
-            <div class="modalContainerClose" data-dismiss="modal">X</div>
-            <div class="modalContainerPicture">
-                <div class="modalContainerPictureItem">
-                    <img src="src/creations/planche.JPG" alt="">
-                </div>
-            </div>
-            <!-- <div class="modalContainerInfos">
-                <h2 class="modalContainerInfosTitle">
-                    Une réalisation
-                </h2>
-                <p class="modalContainerInfosText">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
 
-            </div> -->
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
 
-        </div>
-    </div>
+                    // Store hash
+                    var hash = this.hash;
 
-    <div class="modal fade" id="coupelle_white" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modalContainer" role="document">
-            <div class="modalContainerClose" data-dismiss="modal">X</div>
-            <div class="modalContainerPicture">
-                <div class="modalContainerPictureItem">
-                    <img src="src/creations/coupelle_white.JPG" alt="">
-                </div>
-            </div>
-            <!-- <div class="modalContainerInfos">
-                <h2 class="modalContainerInfosTitle">
-                    Une réalisation
-                </h2>
-                <p class="modalContainerInfosText">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</p>
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
 
-            </div> -->
-
-        </div>
-    </div>
-
-    <div class="modal fade" id="coupelle_black" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modalContainer" role="document">
-            <div class="modalContainerClose" data-dismiss="modal">X</div>
-            <div class="modalContainerPicture">
-                <div class="modalContainerPictureItem">
-                    <img src="src/creations/coupelle_black.JPG" alt="">
-                </div>
-            </div>
-            <!-- <div class="modalContainerInfos">
-                <h2 class="modalContainerInfosTitle">
-                    Une réalisation
-                </h2>
-                <p class="modalContainerInfosText">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</p>
-
-            </div> -->
-
-        </div>
-    </div>
-
-    <div class="modal fade" id="mortier" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modalContainer" role="document">
-            <div class="modalContainerClose" data-dismiss="modal">X</div>
-            <div class="modalContainerPicture">
-                <div class="modalContainerPictureItem">
-                    <img src="src/creations/mortier.JPG" alt="">
-                </div>
-            </div>
-            <!-- <div class="modalContainerInfos">
-                <h2 class="modalContainerInfosTitle">
-                    Une réalisation
-                </h2>
-                <p class="modalContainerInfosText">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</p>
-
-            </div> -->
-
-        </div>
-    </div>
-    <div class="modal fade" id="plat" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modalContainer" role="document">
-            <div class="modalContainerClose" data-dismiss="modal">X</div>
-            <div class="modalContainerPicture">
-                <div class="modalContainerPictureItem">
-                    <img src="src/creations/plat.jpg" alt="">
-                </div>
-            </div>
-            <!-- <div class="modalContainerInfos">
-                <h2 class="modalContainerInfosTitle">
-                    Une réalisation
-                </h2>
-                <p class="modalContainerInfosText">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</p>
-
-            </div> -->
-
-        </div>
-    </div>
-    <div class="modal fade" id="couteau_noir" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modalContainer" role="document">
-            <div class="modalContainerClose" data-dismiss="modal">X</div>
-            <div class="modalContainerPicture">
-                <div class="modalContainerPictureItem">
-                    <img src="src/creations/couteau_noir.jpg" alt="">
-                </div>
-            </div>
-            <!-- <div class="modalContainerInfos">
-                <h2 class="modalContainerInfosTitle">
-                    Une réalisation
-                </h2>
-                <p class="modalContainerInfosText">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</p>
-
-            </div> -->
-
-        </div>
-    </div>
-    <div class="modal fade" id="couteau_rg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modalContainer" role="document">
-            <div class="modalContainerClose" data-dismiss="modal">X</div>
-            <div class="modalContainerPicture">
-                <div class="modalContainerPictureItem">
-                    <img src="src/creations/couteau_rg.jpg" alt="">
-                </div>
-            </div>
-            <!-- <div class="modalContainerInfos">
-                <h2 class="modalContainerInfosTitle">
-                    Une réalisation
-                </h2>
-                <p class="modalContainerInfosText">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</p>
-
-            </div> -->
-
-        </div>
-    </div>
-    <div class="modal fade" id="couteau_bf" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modalContainer" role="document">
-            <div class="modalContainerClose" data-dismiss="modal">X</div>
-            <div class="modalContainerPicture">
-                <div class="modalContainerPictureItem">
-                    <img src="src/creations/couteau_bf.jpg" alt="">
-                </div>
-            </div>
-            <!-- <div class="modalContainerInfos">
-                <h2 class="modalContainerInfosTitle">
-                    Une réalisation
-                </h2>
-                <p class="modalContainerInfosText">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.</p>
-
-            </div> -->
-
-        </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
 </body>
 
 </html>

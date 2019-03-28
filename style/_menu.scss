@@ -1,0 +1,101 @@
+@import "variables.scss";
+.open {
+    position: fixed;
+    z-index: 10;
+    span {
+        width: 40px;
+        height: 30px;
+        cursor: pointer;
+        position: relative;
+        top: 10px;
+        left: 40px;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40px;
+            height: 16px;
+            border-bottom: 2px solid white;
+            border-top: 2px solid white;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            top: 9px;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: white;
+        }
+    }
+}
+
+.menu {
+    position: absolute;
+    z-index: 100;
+    height: 100vh;
+    width: 30vw;
+    &Container {
+        background-color: $darkGrey;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        &Close {
+            width: 40px;
+            height: 40px;
+            top: 20px;
+            left: 40px;
+            cursor: pointer;
+            position: absolute;
+            &:after {
+                content: '';
+                display: flex;
+                position: absolute;
+                width: 30px;
+                height: 2px;
+                left: 5px;
+                top: 20px;
+                background-color: $white;
+                transform: rotate(45deg);
+            }
+            &:before {
+                content: '';
+                display: flex;
+                position: absolute;
+                width: 30px;
+                height: 2px;
+                left: 5px;
+                top: 20px;
+                background-color: $white;
+                transform: rotate(-45deg);
+            }
+        }
+        &Items {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            a {
+                text-decoration: none;
+                color: $white;
+                font-size: 60px;
+            }
+        }
+    }
+}
+
+.noVisible {
+    left: -100vw;
+    transition: left 0.8s ease-out;
+}
+
+.visible {
+    left: 0;
+    transition: left 0.8s ease;
+    .menuContainer {
+        color: $white;
+    }
+}
