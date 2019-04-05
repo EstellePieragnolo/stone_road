@@ -68,6 +68,7 @@ div {
   font-size: 38px;
   text-align: center;
   letter-spacing: 0.5px;
+  line-height: 58px;
 }
 .containerBodyLink {
   max-width: 490px;
@@ -82,10 +83,30 @@ div {
   margin: 0;
   width: 45px;
 }
+.containerBodyLinkFacebook:hover {
+  animation: shake 1.1s ease-in both;
+}
 .containerBodyLinkInstagram {
   width: 45px;
 }
+.containerBodyLinkInstagram:hover {
+  animation: shake 1.1s ease-in both;
+}
 
+@keyframes shake {
+  10%, 90% {
+    transform: rotate(20deg);
+  }
+  20%, 80% {
+    transform: rotate(-20deg);
+  }
+  30%, 50%, 70% {
+    transform: rotate(25deg);
+  }
+  40%, 60% {
+    transform: rotate(-25deg);
+  }
+}
 @media screen and (min-width: 315px) and (max-width: 576px) {
   .container {
     margin: 0 20px;
@@ -108,7 +129,7 @@ div {
   }
   .containerBodyText, .containerBodyLink {
     font-size: 14px;
-    line-height: 20px;
+    line-height: 24px;
   }
   .containerBodyLink {
     max-width: 300px;
@@ -136,6 +157,7 @@ div {
   }
   .containerBodyText, .containerBodyLink {
     font-size: 26px;
+    line-height: 48px;
   }
   .containerBodyLink a {
     width: 34px;
