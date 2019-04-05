@@ -7,17 +7,23 @@ body {
 
 h1,
 h3,
-p {
+p,
+div {
   margin: 0;
+  padding: 0;
 }
 
 .container {
   color: #666;
+  margin: 20px auto;
+  padding: 0;
 }
 .containerHeader {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 .containerHeaderTitle {
   display: flex;
@@ -46,7 +52,15 @@ p {
   text-align: center;
   letter-spacing: 0.5px;
 }
-.containerBody img {
+.containerBodySignal {
+  margin: 48px 0;
+}
+.containerBodySeparator {
+  display: inline-block;
+  width: 30px;
+  height: 8px;
+  border-radius: 10px;
+  background-color: #F4E261;
   margin: 48px 0;
 }
 .containerBodyText, .containerBodyLink {
@@ -58,6 +72,80 @@ p {
 .containerBodyLink {
   max-width: 490px;
   margin: 40px auto 0;
+}
+.containerBodyLink a {
+  width: 45px;
+  height: 48px;
+}
+.containerBodyLinkFacebook {
+  border-radius: 5px;
+  margin: 0;
+  width: 45px;
+}
+.containerBodyLinkInstagram {
+  width: 45px;
+}
+
+@media screen and (min-width: 315px) and (max-width: 576px) {
+  .container {
+    margin: 0 20px;
+  }
+  .containerHeaderTitle {
+    font-size: 24px;
+    height: 129px;
+  }
+  .containerHeader img {
+    width: 133px;
+  }
+  .containerBodyHeader {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .containerBodySeparator {
+    width: 18px;
+    height: 4px;
+    margin: 36px 0;
+  }
+  .containerBodyText, .containerBodyLink {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .containerBodyLink {
+    max-width: 300px;
+  }
+  .containerBodyLink a {
+    width: 19px;
+  }
+  .containerBodyLinkFacebook {
+    width: 19px;
+  }
+  .containerBodyLinkInstagram {
+    width: 19px;
+  }
+}
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .containerHeaderTitle {
+    font-size: 60px;
+    height: 311px;
+  }
+  .containerHeader img {
+    width: 322px;
+  }
+  .containerBodyHeader {
+    font-size: 26px;
+  }
+  .containerBodyText, .containerBodyLink {
+    font-size: 26px;
+  }
+  .containerBodyLink a {
+    width: 34px;
+  }
+  .containerBodyLinkFacebook {
+    width: 34px;
+  }
+  .containerBodyLinkInstagram {
+    width: 34px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

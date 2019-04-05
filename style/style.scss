@@ -8,17 +8,23 @@ body {
 
 h1,
 h3,
-p {
+p,
+div {
     margin: 0;
+    padding: 0;
 }
 
 .container {
     color: #666;
+    margin: 20px auto;
+    padding: 0;
 
     &Header {
         position: relative;
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
 
         &Title {
             display: flex;
@@ -52,7 +58,16 @@ p {
             letter-spacing: 0.5px;
         }
 
-        img {
+        &Signal {
+            margin: 48px 0;
+        }
+
+        &Separator {
+            display: inline-block;
+            width: 30px;
+            height: 8px;
+            border-radius: 10px;
+            background-color: #F4E261;
             margin: 48px 0;
         }
 
@@ -68,6 +83,120 @@ p {
         &Link {
             max-width: 490px;
             margin: 40px auto 0;
+
+            a {
+                width: 45px;
+                height: 48px;
+            }
+
+            &Facebook {
+                border-radius: 5px;
+                margin: 0;
+                width: 45px;
+            }
+
+            &Instagram {
+                width: 45px;
+            }
+
+        }
+    }
+}
+
+
+@media screen and (min-width: 315px) and (max-width: 576px) {
+    .container {
+        margin: 0 20px;
+
+        &Header {
+            &Title {
+                font-size: 24px;
+                height: 129px;
+            }
+
+            img {
+                width: 133px;
+            }
+        }
+
+
+        &Body {
+            &Header {
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+
+            &Separator {
+                width: 18px;
+                height: 4px;
+                margin: 36px 0;
+            }
+
+            &Text,
+            &Link {
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            &Link {
+                max-width: 300px;
+
+                a {
+                    width: 19px;
+                }
+
+                &Facebook {
+                    width: 19px;
+                }
+
+                &Instagram {
+                    width: 19px;
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .container {
+        &Header {
+            &Title {
+                font-size: 60px;
+                height: 311px;
+            }
+
+            img {
+                width: 322px;
+            }
+        }
+
+
+        &Body {
+            &Header {
+                font-size: 26px;
+            }
+
+
+            &Text,
+            &Link {
+                font-size: 26px;
+            }
+
+            &Link {
+                a {
+                    width: 34px;
+                }
+
+                &Facebook {
+                    width: 34px;
+                }
+
+                &Instagram {
+                    width: 34px;
+                }
+            }
         }
     }
 }
