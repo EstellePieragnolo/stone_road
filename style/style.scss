@@ -1,6 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Arvo|Raleway');
+
+body {
+    display: flex;
+    align-items: center;
+}
+
+h1,
+h3,
+p {
+    margin: 0;
+}
 
 .container {
+    color: #666;
+
     &Header {
         position: relative;
         display: flex;
@@ -9,10 +23,10 @@
         &Title {
             display: flex;
             align-items: center;
+            text-align: center;
             text-transform: uppercase;
             font-size: 90px;
             letter-spacing: 0.5px;
-            color: #666;
             font-family: 'Raleway', sans-serif;
             height: 427px;
 
@@ -23,8 +37,37 @@
             top: 0;
             width: 443px;
             z-index: -1;
-            opacity: 0.3;
         }
     }
 
+    &Body {
+        margin-top: 55px;
+        text-align: center;
+
+        &Header {
+            font-family: 'Arvo', serif;
+            text-transform: uppercase;
+            font-size: 38px;
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+
+        img {
+            margin: 48px 0;
+        }
+
+        &Text,
+        &Link {
+            font-family: 'Raleway', sans-serif;
+            font-size: 38px;
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+
+
+        &Link {
+            max-width: 490px;
+            margin: 40px auto 0;
+        }
+    }
 }
